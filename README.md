@@ -1,6 +1,6 @@
 # PROYECTO DE IMPLEMENTACIÓN GUÍA TURISTICA PASEO EL ÉDEN
 
-Este repositorio documental tiene como intención describir la arquitectura de referencia, el alcance y el enfoque que actualmente de utiliza para la implementación de la guia turistica del paseo El Éden de la ciudad de La Tebaida, Quindio. El documento define el contexto y la necesidad de su implementación y se analiza de forma general el funcionamiento del sistema, la integración con el cliente, las organizaciones participes, las restricciones funcionales y no funcionales y las características tecnológicas de la aplicación. Esta trabajo de arquitectura fue realizado por:
+Este repositorio documental tiene como intención describir la arquitectura de referencia, el alcance y el enfoque que actualmente de utiliza para la implementación de la guia turistica del paseo El Éden de la ciudad de La Tebaida, Quindío. El documento define el contexto y la necesidad de su implementación y se analiza de forma general el funcionamiento del sistema, la integración con el cliente, las organizaciones participes, las restricciones funcionales y no funcionales y las características tecnológicas de la aplicación. Esta trabajo de arquitectura fue realizado por:
 
 ![alt text](./assets/arquitectonicosiv.jpg?raw=true)
 
@@ -18,7 +18,7 @@ Necesidades de Negocio
 Turismo: Herramienta que permita realizar una oferta de experiencias a turistas y lugareños aportando al crecimiento turístico del municipio. 
 
 
-### Objetivos de negocio
+### Objetivos de negocio
 
 ## Arquitectura
 
