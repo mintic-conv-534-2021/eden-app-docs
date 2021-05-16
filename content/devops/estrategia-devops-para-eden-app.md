@@ -7,7 +7,6 @@
 - [Motivadores y restricciones](#Motivadores-y-restricciones)
 - [Requerimientos](#Requerimientos)  
 - [Diseño](#Diseño)
-    - 
 
 ## Introducción
 
