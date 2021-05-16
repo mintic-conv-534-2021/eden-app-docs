@@ -31,7 +31,7 @@ Turismo: Herramienta que permita realizar una oferta de experiencias a turistas 
 
 ## Procesos
 
-- Para ver mas sobre los procesos de desarrollo que recomendamos seguir, puede ir a: [Procesos Desarrollo](./content/procesos/procesos-desarrollo.md)
+- Para ver mas sobre los procesos de desarrollo que recomendamos seguir: [Procesos Desarrollo](./content/procesos/procesos-desarrollo.md)
 
 - Para conocer los procesos de negocio de EdenApp: [Procesos de negocio](./content/procesos/procesos-negocio.md)
 
