@@ -30,7 +30,7 @@ El método usado para la creación de la arquitectura del producto EdenApp, est�
 
 ## Requerimientos del sistema
 
-Fuente: [./content/arquitectura/sources/requerimientos.xlsx](./sources/requerimientos.xlsx)
+Fuente: [./content/arquitectura/source/requerimientos.xlsx](./source/requerimientos.xlsx)
 
 **Nota**: Si realiza un cambio en el excel de requerimientos, por favor actualice esta tabla con la herramienta [Table2Markdown](https://tabletomarkdown.com/).
 
@@ -48,7 +48,7 @@ TODO agregar
 
 Debido a que son tablas complejas, preferimos que se remita a la fuenta para revisarlas.
 
-Fuente: [./content/arquitectura/sources/requerimientos.xlsx - Hoja "escenarios"](./sources/requerimientos.xlsx)
+Fuente: [./content/arquitectura/source/requerimientos.xlsx - Hoja "escenarios"](./source/requerimientos.xlsx)
 
 ### Restricciones
 
@@ -97,7 +97,7 @@ Estilo de arquitectura nuclear y patrones complementarios
 Patrones de diseño 
 Basado en los patrones descritos en el libro [Microservices Pattern: A pattern language for microservices](https://microservices.io/patterns/) , [Cloud design patterns - Azure Architecture Center](https://docs.microsoft.com/en-us/azure/architecture/patterns/), [SOA Design Patterns](https://patterns.arcitura.com/soa-patterns).
 
-Fuente: [./content/arquitectura/sources/requerimientos.xlsx - Hoja "patrones"](./sources/requerimientos.xlsx)
+Fuente: [./content/arquitectura/source/requerimientos.xlsx - Hoja "patrones"](./source/requerimientos.xlsx)
 
 **Nota**: Si realiza un cambio en el excel de requerimientos, por favor actualice esta tabla con la herramienta [Table2Markdown](https://tabletomarkdown.com/)
 
