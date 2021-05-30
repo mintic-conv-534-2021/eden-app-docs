@@ -23,6 +23,13 @@ Necesidades de Negocio
 Turismo: Herramienta que permita realizar una oferta de experiencias a turistas y lugareños aportando al crecimiento turístico del municipio. 
 
 
+
+
+![alt text](./assets/EE_NecesidadesDeNegocio_v1.0.jpg?raw=true)
+
+![alt text](./assets/EE_NecesidadesTecnicas_v1.0.jpg?raw=true)
+
+
 ### Objetivos de negocio
 
 ## Arquitectura
