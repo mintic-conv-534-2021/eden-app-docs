@@ -18,23 +18,19 @@ Para complementar el contenido presentado en este repositorio puede ver algunos 
 
 ## Contexto de negocio
 
-Necesidades de Negocio
-
-Turismo: Herramienta que permita realizar una oferta de experiencias a turistas y lugareños aportando al crecimiento turístico del municipio. 
-
-
-
-
 ![alt text](./assets/EE_NecesidadesDeNegocio_v1.0.jpg?raw=true)
 
-![alt text](./assets/EE_NecesidadesTecnicas_v1.0.jpg?raw=true)
-
-
 ### Objetivos de negocio
+
+1. Presentar a los turistas y lugareños una herramienta que permita conocer la oferta turistica, gastronomica y empresarial de la tebaida.
+2. Implulsar el credimiento comercial y turistico del municipio de la Tebaida.
+3. Motivar a los empresarios y microempresarios a cumplir con los requisitos comerciales.
 
 ## Arquitectura
 
 - Para ver mas sobre la arquitectura de la aplicación puede ir a: [Propuesta arquitectura](./content/arquitectura/propuesta-arquitectura-solucion.md)
+
+![alt text](./assets/EE_NecesidadesTecnicas_v1.1.jpg?raw=true)
 
 ## Procesos
 
