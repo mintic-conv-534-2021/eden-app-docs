@@ -8,9 +8,9 @@ git clone https://github.com/mintic-conv-534-2021/eden-app-docs.git
 
 ## Introducción
 
-Este repositorio documental tiene como intención describir la arquitectura de referencia, el alcance y el enfoque que actualmente de utiliza para la implementación de la guia turistica del paseo El Éden del municipio de La Tebaida, Quindío. En este se define el contexto y la necesidad de negocio que motiva su implementación. Se analiza de forma general el funcionamiento del sistema, la integración con el cliente, las organizaciones partícipes, las restricciones funcionales, atributos de calidad y las características tecnológicas de la aplicación. Este trabajo de arquitectura fue realizado por:
+Este repositorio documental tiene como intención describir la arquitectura de referencia, el alcance y el enfoque que actualmente de utiliza para la implementación de la guia turistica del paseo El Éden del municipio de La Tebaida, Quindío. En este se define el contexto y la necesidad de negocio que motiva su implementación. Se analiza de forma general el funcionamiento del sistema, la integración con el cliente, las organizaciones partícipes, las restricciones funcionales, atributos de calidad y las características tecnológicas de la aplicación. Este trabajo de arquitectura fue realizado por los arquitectos:
 
-![alt text](./assets/EE_Arquitectos.jpg?raw=true)
+![alt text](./assets/EE_Arquitectos_v1.0.jpg?raw=true)
 
 Como requisito para la condonación del crédito beca ofrecido por el MinTic, con el cual realizaron sus estudios formales de arquitectura empresarial y de software en la Pontificia Universidad Javeriana.
 
