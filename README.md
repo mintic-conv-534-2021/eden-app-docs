@@ -1,6 +1,6 @@
 # PROYECTO DE IMPLEMENTACIÓN GUÍA TURISTICA PASEO EL ÉDEN
 
-**Importante**: Le recomendamos encarecidamente que clone este repositorio y realice los ajustes necesarios cuando lo requiera. El contenido de este repo incluye archivos en formato [Markdown](https://www.markdownguide.org/), excel y [draw.io](https://draw.io). Cualquier cambio que realice versionelo adecuadamente para que todo el equipo de desarrollo de producto lo tenga presente.
+**Importante**: Le recomendamos por favor clone este repositorio y realice los ajustes necesarios cuando se requiera. El contenido de este repositorio incluye archivos en formato [Markdown](https://www.markdownguide.org/), excel y [draw.io](https://draw.io). Cualquier actualización que realice versionelo adecuadamente para que todo el equipo de desarrollo de producto lo tenga sincronizado.
 
 ```
 git clone https://github.com/mintic-conv-534-2021/eden-app-docs.git
