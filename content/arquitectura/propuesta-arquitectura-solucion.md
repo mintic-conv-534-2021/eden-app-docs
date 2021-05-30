@@ -54,6 +54,13 @@ La solución de arquitectura propuesta para ElEdenApp se basa en un estilo arqui
 | Dueño de Organización | Crear y gestionar los recursos que permitan dar a conocer los productos y servicios a los turistas de una o mas organizaciones a su nombre. |
 | Administrador | Crear y gestionar categorias de empresa y de productos, asi como de gestionar la visibilidad de sus contenidos en la plataforma. |
 
+
+![alt text](../../diagrams/EE_DiagramaCasosDeUso_v1.0.jpg?raw=true)
+
+
+
+eden-app-docs/diagrams/
+
 ### Modelo de casos de uso
 
 Los casos de uso se pueden ver rapidamente en el siguiene diagrama:
