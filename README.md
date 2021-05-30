@@ -18,6 +18,12 @@ Para complementar el contenido presentado en este repositorio puede ver algunos 
 
 ## Contexto de negocio
 
+Actualmente Colombia ha tenido un aumento notable en el mercado de retail por internet. Si se analizan los números que dejaba este tipo de comercio hace seis años y los comparamos con cifras actuales, es evidente que los colombianos cada año les apuestan mucho más a los canales digitales para suplir sus necesidades. El país ha pasado de un valor anual del Internet retailing de $471 millones de dólares en 2013 a más de $5.207 millones en 2019, según Euromonitor.
+
+Una de las mayores razones se debe a que si bien la penetración de Internet en Colombia está lejos de ser la ideal en 2019, los colombianos que tienen acceso a la red le dan una frecuencia de uso alta a la herramienta: ocho de cada diez personas navegan en la red diariamente, y lo hacen, en su mayoría, desde sus teléfonos móviles y en sus hogares o sitios de trabajo, reporta la Cámara Colombiana de Comercio Electrónico.
+
+Por tanto, el sistema que aquí se implementa es una solución a la necesidad tanto de clientes y proveedores para poder ofrecer información relevante sobre los productos y empresas del sector turistico del municipio de La Tebaida.
+
 ![alt text](./assets/EE_NecesidadesDeNegocio_v1.0.jpg?raw=true)
 
 ### Objetivos de negocio
@@ -28,9 +34,20 @@ Para complementar el contenido presentado en este repositorio puede ver algunos 
 
 ## Arquitectura
 
-- Para ver mas sobre la arquitectura de la aplicación puede ir a: [Propuesta arquitectura](./content/arquitectura/propuesta-arquitectura-solucion.md)
+Esta arquitectura actua como el instrumento para la alcaldia del municipio de La Tebaida para apalancar el cumplimiento de su misión institucional permitiendo resaltar en el mercado por la calidad del servicio que proporciona a sus clientes y el mejoramiento de la calidad de vida de quienes conforman este equipo de trabajo.
+
+Esta arquitectura esta diseñada bajo 4 grandes pilares:
+
+- La innovación al permitir que el comercio de La Tebaida se reinvente y permita cohesionar nuevas estrategias de negocio y que se puedan llevar a la realidad en el menor tiempo posible y sin generar traumatismos.
+
+- Confianza al implementar las mejores prácticas de diseño e implementación de arquitecturas que permiten evolucionar de manera eficaz, ordenada, rapida y segura.
+
+- Competitividad en cada uno de los procesos que se implementen dentro de la arquitectura, logrando validar nuevas estrategias comerciales y ofreciendo las mejores soluciones a sus clientes.
 
 ![alt text](./assets/EE_NecesidadesTecnicas_v1.1.jpg?raw=true)
+
+- Para ver mas sobre la arquitectura de la aplicación puede ir a: [Propuesta arquitectura](./content/arquitectura/propuesta-arquitectura-solucion.md)
+
 
 ## Procesos
 
