@@ -36,7 +36,9 @@ Por tanto, el sistema que aquí se implementa es una solución a la necesidad ta
 
 Esta arquitectura actua como el instrumento para la alcaldia del municipio de La Tebaida para apalancar el cumplimiento de su misión institucional permitiendo resaltar en el mercado por la calidad del servicio que proporciona a sus clientes y el mejoramiento de la calidad de vida de quienes conforman este equipo de trabajo.
 
-Esta arquitectura esta diseñada bajo 4 grandes pilares:
+![alt text](./assets/EE_MotivacionArquitectura_v1.0.jpg?raw=true)
+
+Esta arquitectura esta diseñada bajo 3 grandes pilares:
 
 - La innovación al permitir que el comercio de La Tebaida se reinvente y permita cohesionar nuevas estrategias de negocio y que se puedan llevar a la realidad en el menor tiempo posible y sin generar traumatismos.
 
@@ -46,8 +48,15 @@ Esta arquitectura esta diseñada bajo 4 grandes pilares:
 
 ![alt text](./assets/EE_NecesidadesTecnicas_v1.1.jpg?raw=true)
 
-- Para ver mas sobre la arquitectura de la aplicación puede ir a: [Propuesta arquitectura](./content/arquitectura/propuesta-arquitectura-solucion.md)
+La solución debe permitir a la alcadia y a las organizaciones de La Tebaida realizar actualizaciones, creaciones y cambios del contenido de sus productos sin tener que desplegar nuevamente el sistema, además de agregar nuevas organizaciones o categorias sin que esto sea traumático, se espera poder en un futuro recolectar información de los usuarios y servidores para futuro análisis, la disponibilidad del servicio debe ser mínimo del 99.999% del tiempo, es decir la plataforma debe estar en línea las 24 horas del día, los 7 días a la semana, los 365 días del año.
 
+La plataforma debe tener una capacidad de respuesta a las funcionalidades del negocio para temporadas altas, permitiendo crecer y decrecer dinámicamente según la demanda, como en ferias y fiestas, festivos, vacaciones, fiestas decembrina o en otros donde la demanda por los servicios puede crecer hasta 250% sobre la operación normal. 
+
+Las peticiones de consulta de productos no deben tardar más de 1.5 segundos promedio por usuario y ninguna petición puede tardar más de 3 segundos. El contenido digital (Imágenes, archivos, iconos, etc) juega un factor relevante en el sitio, en promedio este representa alrededor del 60% de lo que se despliega en la página, por lo que se requiere una solución que permita manejar este contenido y hacerlo disponible de manera cercana al usuario que lo solicita. 
+
+Con esto la alcaldia de La Tebaida espera poder mejorar la experiencia a los turistas y lugareños con un canal disponible en todo momento, así mismo espera poder ser más agile en la adaptación a los cambios del negocio y automatizar las actividades que actualmente realiza de forma manual.
+
+- Para ver mas sobre la arquitectura de la aplicación puede ir a: [Propuesta arquitectura](./content/arquitectura/propuesta-arquitectura-solucion.md)
 
 ## Procesos
 
