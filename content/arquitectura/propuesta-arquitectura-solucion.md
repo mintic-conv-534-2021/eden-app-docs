@@ -1,4 +1,4 @@
-# Diseño de la arquitectura de software para EdenApp
+# DISEÑO DE ARQUITECTURA DE SOFTWARE PARA ELEDENAPP
 
 ## Contenido
 
@@ -14,9 +14,7 @@
 
 ## Introducción
 
-Este documento pretende servir como base para la creación de servicios similares dentro del equipo y como guía para los desarrolladores para entender la razón de las decisiones de diseño tomadas en el momento de la concepción del producto minimo viable para EdenApp. Esperamos que sea lo suficientemente claro para entender las necesidades, restricciones y demás consideraciones que nos han llevado al diseño final del servicio, el entendimiento del por qué funciona como está planteado aquí y las restricciones bajo las cuales fue desarrollado pueden servir de insumo para planear y ejecutar cambios en el futuros. 
-
-Si en el momento de leer esta documentación se está preguntando por qué no hicimos antes sea lo que sea la mejora que le está asignado a usted, debe entender que probablemente no estaba dentro de nuestro entendimiento, así que lo invitamos a actualizar todo lo que vea necesario en esta página con el fin de ahorrarle tiempo al próximo desarrollador, así como esperamos, le ahorraremos tiempo a usted.
+Este documento sirve como base para la creación de servicios similares dentro del equipo y como guía para los desarrolladores el entender la razón de las decisiones de diseño tomadas en el momento de la concepción del producto minimo viable para ElEdenApp. Esperamos que sea lo suficientemente claro para entender las necesidades, restricciones y demás consideraciones que nos han llevado al diseño final del servicio, el entendimiento del por qué funciona como está planteado aquí y las restricciones bajo las cuales fue desarrollado pueden servir de insumo para planear y ejecutar cambios en el futuro. 
 
 Para el levantamiento de estos motivadores se usó un árbol de utilidad para definir una priorización inicial de los atributos de calidad.
 
@@ -37,6 +35,24 @@ Fuente: [./content/arquitectura/source/requerimientos.xlsx](./source/requerimien
 *Tabla requerimientos*
 
 TODO agregar
+
+## Diseño de Arquitectura
+
+La solución de arquitectura propuesta para ElEdenApp se basa en un estilo arquitectural de microservicios, permitiendo la encapsulación de responsabilidades definidas y un desacoplamiento e independencia de los servicios. Lo cual posibilita la adición o modificación de características a la arquitectura de forma ágil y sin generar indisponibilidades en la prestación de servicio o en el funcionamiento de los demás servicios.
+
+# Objetivos de la Arquitectura
+
+- Generar una herramienta para la automatización del proceso de registro, gestion y publicación del contenido turistico y comercial.
+- Definir una arquitectura de solución completamente nativa en nube.
+- Definir una estrategia de arquitectura que asegure la disponibilidad del servicio de 99.999.
+- Modelar una solución arquitectural de escalabilidad/elasticidad que asegure el crecimiento y decrecimiento del sistio en incrementos de carga.
+
+
+| Rol | Descripción |
+| --- | --- |
+| Turista | Consultar los productos y servicios de la oferta turistica y comercial del municipio de La Tebaida |
+| Dueño de Organización | Crear y gestionar los recursos que permitan dar a conocer los productos y servicios a los turistas de una o mas organizaciones a su nombre. |
+| Administrador | Crear y gestionar categorias de empresa y de productos, asi como de gestionar la visibilidad de sus contenidos en la plataforma. |
 
 ### Modelo de casos de uso
 
