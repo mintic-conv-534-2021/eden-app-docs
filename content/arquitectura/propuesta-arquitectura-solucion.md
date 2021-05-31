@@ -47,6 +47,30 @@ La solución de arquitectura propuesta para ElEdenApp se basa en un estilo arqui
 - Definir una estrategia de arquitectura que asegure la disponibilidad del servicio de 99.999.
 - Modelar una solución arquitectural de escalabilidad/elasticidad que asegure el crecimiento y decrecimiento del sistio en incrementos de carga.
 
+## Diseño Guiado por Dominio (DDD)
+
+- DOMINIO:
+Entendido como el negocio en si, es todo aquello a lo que la alcaldia de La Tebaida hace como entidad a traves de la plataforma ElEdenApp y en consecuencia es el "problema" que se desea resolver, en este caso tener una herramienta que sirva como catalogo de los producto y servicios de las empresas del municipio. El subdominio es la estrategia que permite separar el problema en pequeñas partes funcionales, se debe clasificar en «Core» (Por lo que visita el cliente la plataforma) el cual soporta una funcionalidad para que opere la plataforma y en «soporte» y/o «generico» que son funcionalidades que pueden usarse en este u otro dominio.
+
+![alt text](../../assets/EE_Dominio_v1.0.jpg?raw=true)
+
+- BOUNDED CONTEXT:
+Módulo de software especifico que puede abarcar un sistema, aplicaicon o servicio comercial.
+
+![alt text](../../assets/EE_BoundedContext_v1.0.jpg?raw=true)
+
+- ENTIDAD:
+El libro de Vernon, "Implementación del diseño controlado por dominio", tiene una excelente definición de Entidad: "Diseñamos un concepto de dominio como una Entidad cuando nos preocupamos por su individualidad, cuando distinguir si de todos los objetos en un sistema es una restricción obligatoria. Una Entidad es una cosa única y es capaz de cambiar continuamente durante un largo período de tiempo". La mutabilidad y la identidad única son las dos características principales que tienen las entidades.
+
+![alt text](../../assets/EE_Entidades_1.0.jpg?raw=true)
+
+
+![alt text](../../assets/EE_Servicios_v1.0.jpg?raw=true)
+
+
+### Modelo de casos de uso
+
+Los casos de uso se pueden ver rapidamente en el siguiene diagrama:
 
 | Rol | Descripción |
 | --- | --- |
@@ -54,18 +78,11 @@ La solución de arquitectura propuesta para ElEdenApp se basa en un estilo arqui
 | Dueño de Organización | Crear y gestionar los recursos que permitan dar a conocer los productos y servicios a los turistas de una o mas organizaciones a su nombre. |
 | Administrador | Crear y gestionar categorias de empresa y de productos, asi como de gestionar la visibilidad de sus contenidos en la plataforma. |
 
-
 ![alt text](../../diagrams/EE_DiagramaCasosDeUso_v1.0.jpg?raw=true)
 
 
 
-eden-app-docs/diagrams/
 
-### Modelo de casos de uso
-
-Los casos de uso se pueden ver rapidamente en el siguiene diagrama:
-
-TODO agregar
 
 ### Escenarios de atributos de calidad
 
