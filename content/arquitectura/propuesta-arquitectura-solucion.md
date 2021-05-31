@@ -68,6 +68,11 @@ El libro de Vernon, "Implementación del diseño controlado por dominio", tiene 
 ![alt text](../../assets/EE_Servicios_v1.0.jpg?raw=true)
 
 
+![alt text](../../assets/EE_EventStormingParte1_v1.0.jpg?raw=true)
+
+
+
+
 ### Modelo de casos de uso
 
 Los casos de uso se pueden ver rapidamente en el siguiene diagrama:
