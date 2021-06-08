@@ -14,9 +14,9 @@
 
 ## Introducción
 
-Este documento sirve como base para la creación de servicios similares dentro del equipo y como guía para los desarrolladores el entender la razón de las decisiones de diseño tomadas en el momento de la concepción del producto minimo viable para ElEdenApp. Esperamos que sea lo suficientemente claro para entender las necesidades, restricciones y demás consideraciones que nos han llevado al diseño final del servicio, el entendimiento del por qué funciona como está planteado aquí y las restricciones bajo las cuales fue desarrollado pueden servir de insumo para planear y ejecutar cambios en el futuro. 
+Este documento sirve como base para la creación de servicios similares dentro del equipo y como guía para los desarrolladores el entender la razón de las decisiones de diseño tomadas en el momento de la concepción del producto minimo viable para ElEdenApp. Esperamos que sea lo suficientemente claro para entender las necesidades, restricciones y demás consideraciones que nos han llevado al diseño final del servicio, el entendimiento del por qué funciona como está planteado aquí y las restricciones bajo las cuales fue desarrollado pueden servir de insumo para planear y ejecutar cambios en un futuro. 
 
-Para el levantamiento de estos motivadores se usó un árbol de utilidad para definir una priorización inicial de los atributos de calidad.
+Para el levantamiento de estos motivadores se usó un árbol de utilidad y así definir una priorización inicial de los atributos de calidad.
 
 Se toma como base los principios del marco de trabajo Amazon Well-Architected Framework.
 
@@ -24,7 +24,7 @@ Se hace énfasis en habilitar la capacidad de autoservicio dentro del servicio d
 
 ## Método
 
-El método usado para la creación de la arquitectura del producto EdenApp, está dirigido por los atributos de calidad y su relación con los requerimientos del sistema. Se busca alinear al máximo los objetivos y necesidades de negocio con los capacidades técnicas a través de los requerimientos del sistema, también definir las bases que permitirán evolucionar el producto a medida que se aprende mas sobre las necesidades de los usuarios.
+El método usado para la creación de la arquitectura del producto EdenApp, está dirigido por los atributos de calidad y su relación con los requerimientos del sistema. Se busca alinear al máximo los objetivos y necesidades de negocio con los capacidades técnicas a través de los requerimientos del sistema, también definir las bases que permitirán evolucionar el producto a medida que se aprende más sobre las necesidades de los usuarios.
 
 ## Requerimientos del sistema
 
@@ -39,6 +39,17 @@ TODO agregar
 ## Diseño de Arquitectura
 
 La solución de arquitectura propuesta para ElEdenApp se basa en un estilo arquitectural de microservicios, permitiendo la encapsulación de responsabilidades definidas y un desacoplamiento e independencia de los servicios. Lo cual posibilita la adición o modificación de características a la arquitectura de forma ágil y sin generar indisponibilidades en la prestación de servicio o en el funcionamiento de los demás servicios.
+
+# Alcance de la Arquitectura
+
+El alcance de diseño de arquitectura que aquí se presenta pretende definir y detallar la arquitectura objetivo del sistema de gestión de bienes y productos de las diferentes organizaciones, para su implementación. En el producto minimo viable se detalla el diseño e implementación de una aplicación web progresiva que permite realizar una oferta de experiencias a turistas y lugareños aportando a la reactivación/crecimiento turístico del municipio. El alcance del proyecto es definir la arquitectura general de la solución la cual permite estructurar la oferta turística del municipio de La Tebaida y la implementación de una web progresiva que sirve de herramienta para tal fin. 
+
+El producto mínimo viable de esta solución tiene como alcance la implementación del módulo de restaurantes donde se pueden realizar las siguientes funcionalidades:
+
+ - Registro de la organización (restaurante)
+ -	Creación, visualización, actualización y eliminación de la información de la organización.
+ -	Home de la aplicación web progresiva.
+ -	Módulo de visualización de información de restaurantes.
 
 # Objetivos de la Arquitectura
 
@@ -64,9 +75,19 @@ El libro de Vernon, "Implementación del diseño controlado por dominio", tiene 
 
 ![alt text](../../assets/EE_Entidades_1.0.jpg?raw=true)
 
+- SERVICIOS
+Los servicios siempre se exponen como una interfaz, no para "intercambiabilidad", capacidad de prueba o similares, sino para exponer un conjunto de operaciones cohesivas en forma de contrato. Un buen servicio debe cumplir estas características:
+   - La operación se relaciona con un concepto de dominio que no es una parte natural de una entidad u objeto de valor.
+   - La interfaz se define en términos de otros elementos del modelo de dominio.
+   - La operación es independiente
 
-![alt text](../../assets/EE_Servicios_v1.0.jpg?raw=true)
+Según lo anterior se proponen los siguientes servicios en los cuales podemos encapsular las funcionalidades principales para porder cumplir los objetivos de las arquitectura en el alcance planteado. Se plantea exponer la funcionalidades CRUD de una organizacion, del producto y se han implementado dos tipos de servicios que permitiran categorizar cada uno de ellos. Un catálogo de Organizaciones y de productos asi el negocio prodrá clasificarlos segun las necesidades comerciales.
 
+![alt text](../../assets/EE_Servicios_v1.1.jpg?raw=true)
+
+En el siguiente repositorio en swagger se puede acceder a la documentación tecnica de los servicios expuestos.
+
+http://k8s-default-edenapii-1d067437d3-2023258929.us-west-2.elb.amazonaws.com/eden-api/swagger-ui/index.html?configUrl=/eden-api/swagger-config#/catalogo-organizacion-controller/getCatalogoOrganizacionList
 
 ![alt text](../../assets/EE_EventStormingParte1_v1.0.jpg?raw=true)
 
