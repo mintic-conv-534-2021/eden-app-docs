@@ -91,7 +91,8 @@ http://k8s-default-edenapii-1d067437d3-2023258929.us-west-2.elb.amazonaws.com/ed
 
 - **EVENT STORMING:**
 
-Para la responsabilidad de negocio su utiliza la herramienta de [Event Storming](https://en.wikipedia.org/wiki/Event_Storming) para modelar sus dominios. A continaucon se describe cada uno de los procesos y resultado de los eventos principales del sistema.
+Para la responsabilidad de negocio su utiliza la herramienta de [Event Storming](https://en.wikipedia.org/wiki/Event_Storming) para modelar sus dominios. A continuación, se describe cada uno de los procesos y resultado de los eventos principales del sistema.
+
 ![alt text](../../assets/EE_EventStormingConvenciones.jpg?raw=true)
 
 ![alt text](../../assets/EE_EventStormingParte1_v1.0.jpg?raw=true)
@@ -106,8 +107,13 @@ Para la responsabilidad de negocio su utiliza la herramienta de [Event Storming]
 
 ![alt text](../../assets/EE_EventStormingParte6_v1.0.jpg?raw=true)
 
-![alt text](../../assets/EE_ArquitecturaContexto_v1.0.jpg?raw=true)
+- **ARQUITECTURA DE CONTEXTO:**
 
+En base a las definiciones del event storming la arquitectura general estaria compuesta por modulos de difentes categorias donde podrian clasificarse las organizaciones, tales como Hoteles, Restaurantes, Transporte, o algo más particular si así el negocio lo definiera. Apartir de esta clasificación se podran definir catalogos que serviran para exponer el contenido de los bienes y productos de manera organizada segun esta clasificación.
+
+Cada Catálogo podra estar compuesto por entidades de productos u organizaciónes segun las decisiones que requiera el negocio. Para el producto minimo viable se realizará solo los modelos referentes a catalogos de organizaciones. A continuación en el diagrama se evidencia esta organización.
+
+![alt text](../../assets/EE_ArquitecturaContexto_v1.0.jpg?raw=true)
 
 ## Principios de la Arquitectura
 
@@ -121,19 +127,19 @@ Para la responsabilidad de negocio su utiliza la herramienta de [Event Storming]
    <tbody>
       <tr>
          <td align="center">Referencia</td>
-         <td colspan=2>TB_PG01</td>
+         <td colspan=2>EE_P01</td>
       </tr>
       <tr>
          <td align="center">Declaración</td>
-         <td colspan=2>Estos principios se aplican a todas las direcciones dentro de Toures Balón. Es necesario que todo equipo o individuo cumpla con estos principios o sustente por qué no se pueden cumplir.</td>
+         <td colspan=2>Estos principios se aplican a todas los interesados en el proyecto. Es necesario que todo equipo o individuo cumpla con estos principios o sustente por qué no se pueden cumplir.</td>
       </tr>
       <tr>
          <td align="center">Razón Fundamental</td>
-         <td colspan=2>Es la única forma en que se puede proporcionar a toda la empresa y a sus direcciones, un nivel consistente, confiable y cuantificable de información con la calidad necesaria para tomar decisiones que permitan la correcta implementación de los procesos, productos y servicios.</td>
+         <td colspan=2>Es la única forma en que se puede proporcionar a toda la plataforma y a sus interesados, un nivel consistente, confiable y cuantificable de información con la calidad necesaria para tomar decisiones que permitan la correcta implementación de los procesos, productos y servicios.</td>
       </tr>
       <tr>
          <td align="center">Implicaciones</td>
-         <td colspan=2>Se garantiza la inclusión, coherencia y alineación continua con el negocio. Sin esto, la gestión de información, los procesos y las tecnologías se verían rápidamente afectadas.</td>
+         <td colspan=2>Se garantiza la inclusión, coherencia y alineación continua con el negocio. Sin esto, la gestión de información, los procesos y las tecnologías se verían rápidamente afectadas, deprecanto la funcionalidad de la plataforma de ElEdénApp.</td>
       </tr>
       <tr>
          <td></td>
@@ -160,7 +166,7 @@ Para la responsabilidad de negocio su utiliza la herramienta de [Event Storming]
    <tbody>
       <tr>
          <td align="center">Referencia</td>
-         <td colspan=2>TB_PG02</td>
+         <td colspan=2>EE_P02</td>
       </tr>
       <tr>
          <td align="center">Declaración</td>
@@ -168,11 +174,11 @@ Para la responsabilidad de negocio su utiliza la herramienta de [Event Storming]
       </tr>
       <tr>
          <td align="center">Razón Fundamental</td>
-         <td colspan=2>Garantiza que los proyectos y procesos se implementen y operen de manera articulada con los ya establecidos. Controla y previene la desintegración y divergencia de la estrategia empresarial con el objetivo del proyecto o iniciativa.</td>
+         <td colspan=2>Garantiza que los proyectos y procesos se implementen y operen de manera articulada con los ya establecidos. Controla y previene la desintegración y divergencia de la estrategia de negocio que tiene la plataforma ElEdenApp y el objetivo operativo que requiere la alcaldía de La Tebaida.</td>
       </tr>
       <tr>
          <td align="center">Implicaciones</td>
-         <td colspan=2>Todos los proyectos deben estar alineados a la estrategia corporativa y los objetivos de la empresa.</td>
+         <td colspan=2>Todos los proyectos deben estar alineados a la estrategia de la plataforma ElEdenApp y los objetivos de la alcaldía de La Tebaida.</td>
       </tr>
       <tr>
          <td></td>
@@ -180,7 +186,7 @@ Para la responsabilidad de negocio su utiliza la herramienta de [Event Storming]
       </tr>
         <tr>
          <td></td>
-         <td colspan=2>Pueden existir excepciones en la aprobación, mientras se logra establecer una fecha futura cercana a través de un plan de acción aprobado por el comité de arquitectura empresarial.</td>
+         <td colspan=2>Pueden existir excepciones en la aprobación, mientras se logra establecer una fecha futura cercana a través de un plan de acción aprobado por el comité de arquitectura.</td>
       </tr>
         <tr>
          <td></td>
@@ -199,7 +205,7 @@ Para la responsabilidad de negocio su utiliza la herramienta de [Event Storming]
    <tbody>
       <tr>
          <td align="center">Referencia</td>
-         <td colspan=2>TB_PG01</td>
+         <td colspan=2>T_P01</td>
       </tr>
       <tr>
          <td align="center">Declaración</td>
