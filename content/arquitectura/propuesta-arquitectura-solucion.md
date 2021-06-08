@@ -205,7 +205,7 @@ Cada Catálogo podra estar compuesto por entidades de productos u organizacióne
    <tbody>
       <tr>
          <td align="center">Referencia</td>
-         <td colspan=2>T_P01</td>
+         <td colspan=2>EE_P03</td>
       </tr>
       <tr>
          <td align="center">Declaración</td>
@@ -238,19 +238,19 @@ Cada Catálogo podra estar compuesto por entidades de productos u organizacióne
    <tbody>
       <tr>
          <td align="center">Referencia</td>
-         <td colspan=2>TB_PN01</td>
+         <td colspan=2>EE_PN01</td>
       </tr>
       <tr>
          <td align="center">Declaración</td>
-         <td colspan=2>Las operaciones de Toures Balón deben seguir ejecutándose sin importar las interrupciones de los sistemas de información.</td>
+         <td colspan=2>Las operaciones de la plataforma ElEdenApp deben seguir ejecutándose sin importar las interrupciones de los sistemas de información.</td>
       </tr>
       <tr>
          <td align="center">Razón Fundamental</td>
-         <td colspan=2>La dependencia del negocio a los sistemas de información es sumamente alta por lo cual se deben contemplar la confiablidad de estos desde su diseño. Unidades organizacionales o de negocio de Toures Balón deben estar en capacidad de operar con mecanismos alternos a los sistemas de información.</td>
+         <td colspan=2>La dependencia del negocio a los sistemas de información es sumamente alta por lo cual se deben contemplar la confiablidad de estos desde su diseño. Las unidades comerciales, de turismo o de negocio en la Tebaida deben estar en capacidad de operar con mecanismos alternos a los sistemas de información.</td>
       </tr>
       <tr>
          <td align="center">Implicaciones</td>
-         <td colspan=2>Los sistemas de información de Toures Balón deben evaluarse para establecer su criticidad e impacto en los objetivos de la organización, en pro de determinar el nivel de continuidad que es requerido y el plan de recuperación en caso de que sea necesario.</td>
+         <td colspan=2>Los sistemas de información de la plataforma deben evaluarse para establecer su criticidad e impacto en los objetivos de la organización, en pro de determinar el nivel de continuidad que es requerido y el plan de recuperación en caso de que sea necesario.</td>
       </tr>
       <tr>
          <td></td>
@@ -258,7 +258,7 @@ Cada Catálogo podra estar compuesto por entidades de productos u organizacióne
       </tr>
         <tr>
          <td></td>
-         <td colspan=2>La gestión de riesgos de operación debe incluir parchado y actualización de los sistemas de información de Toures Balón.</td>
+         <td colspan=2>La gestión de riesgos de operación debe incluir parchado y actualización de los sistemas de información de ElEdenApp.</td>
       </tr>
    </tbody>
 </table>
@@ -273,15 +273,15 @@ Cada Catálogo podra estar compuesto por entidades de productos u organizacióne
    <tbody>
       <tr>
          <td align="center">Referencia</td>
-         <td colspan=2>TB_PN02</td>
+         <td colspan=2>EE_PN02</td>
       </tr>
       <tr>
          <td align="center">Declaración</td>
-         <td colspan=2>La arquitectura Empresarial de Toures Balón estará implementada bajo el diseño de servicios que implementen funciones de negocio del mundo real y que comprometan los procesos de negocio de la organización. Los sistemas de Información de Toures Balón deberán ser modulares con componentes de sistemas individuales que son integradas por servicios.</td>
+         <td colspan=2>La arquitectura Empresarial de ElEdenApp estará implementada bajo el diseño de servicios que implementen funciones de negocio del mundo real y que comprometan los procesos de negocio de las organizaciones. Los sistemas de Información deberán ser modulares con componentes de sistemas individuales que son integradas por servicios.</td>
       </tr>
       <tr>
          <td align="center">Razón Fundamental</td>
-         <td colspan=2>La arquitectura orientada al servicio permite entregar agilidad al interior Toures Balón y un flujo de información sin límites.</td>
+         <td colspan=2>La arquitectura orientada al servicio permite entregar agilidad al interior de la plataforma y un flujo de información sin límites.</td>
       </tr>
       <tr>
          <td align="center">Implicaciones</td>
@@ -308,15 +308,15 @@ Cada Catálogo podra estar compuesto por entidades de productos u organizacióne
    <tbody>
       <tr>
          <td align="center">Referencia</td>
-         <td colspan=2>TB_PN03</td>
+         <td colspan=2>EE_PN03</td>
       </tr>
       <tr>
          <td align="center">Declaración</td>
-         <td colspan=2>Los procesos de información y de operación de Toures Balón deben cumplir con las políticas y regulaciones.</td>
+         <td colspan=2>Los procesos de información y de operación de ElEdenApp deben cumplir con las políticas y regulaciones de contenido y publicidad.</td>
       </tr>
       <tr>
          <td align="center">Razón Fundamental</td>
-         <td colspan=2>Las políticas internas de Toures Balón deben cumplir con las normas de los diferentes entes de control del país en que se opera el sector del turismo, transporte y acomodación.</td>
+         <td colspan=2>Las políticas internas de la plataforma deben cumplir con las normas de los diferentes entes de control del país en que se opera el sector del turismo, transporte y comercio</td>
       </tr>
       <tr>
          <td align="center">Implicaciones</td>
@@ -345,7 +345,7 @@ Cada Catálogo podra estar compuesto por entidades de productos u organizacióne
    <tbody>
       <tr>
          <td align="center">Referencia</td>
-         <td colspan=2>TB_PI01</td>
+         <td colspan=2>EE_PI01</td>
       </tr>
       <tr>
          <td align="center">Declaración</td>
@@ -353,7 +353,7 @@ Cada Catálogo podra estar compuesto por entidades de productos u organizacióne
       </tr>
       <tr>
          <td align="center">Razón Fundamental</td>
-         <td colspan=2>Uno de los beneficios de un entorno arquitectónico es la capacidad de compartir datos (por ejemplo, texto, video, sonido, etc.) en toda la empresa. A medida que crece el grado de intercambio de datos y las unidades de negocio dependen de información común, se hace esencial que solo el vigilante de datos tome decisiones sobre el contenido de los datos. Dado que los datos pueden perder su integridad cuando se ingresan varias veces, el vigilante de datos tendrá la tarea exclusiva de la entrada de datos que elimina el esfuerzo humano redundante y los recursos de almacenamiento de datos.
+         <td colspan=2>Uno de los beneficios de un entorno arquitectónico es la capacidad de publicar información (por ejemplo, texto, imagen, etc.) en toda la plataforma. A medida que crece el grado de intercambio de datos y las unidades de negocio dependen de información común, se hace esencial que solo el vigilante de datos tome decisiones sobre el contenido de los datos. Dado que los datos pueden perder su integridad cuando se ingresan varias veces, el vigilante de datos tendrá la tarea exclusiva de la entrada de datos que elimina el esfuerzo humano redundante y los recursos de almacenamiento de datos.
 Nota: Un vigilante es diferente a un administrador: un administrador es responsable de la precisión y actualización de los datos, mientras que las responsabilidades de un vigilante pueden ser más amplias e incluir tareas de definición y estandarización de datos.</td>
       </tr>
       <tr>
@@ -385,11 +385,11 @@ Nota: Un vigilante es diferente a un administrador: un administrador es responsa
    <tbody>
       <tr>
          <td align="center">Referencia</td>
-         <td colspan=2>TB_PI02</td>
+         <td colspan=2>EE_PI02</td>
       </tr>
       <tr>
          <td align="center">Declaración</td>
-         <td colspan=2>Los datos se definen de manera consistente para todo Toures Balón, sus definiciones son comprensibles y están disponibles para todos los usuarios.</td>
+         <td colspan=2>Los datos se definen de manera consistente para toda la plataforma del ElEdenApp, sus definiciones son comprensibles y están disponibles para todos los usuarios en un lenguaje común.</td>
       </tr>
       <tr>
          <td align="center">Razón Fundamental</td>
@@ -405,52 +405,12 @@ Nota: Un vigilante es diferente a un administrador: un administrador es responsa
       </tr>
         <tr>
          <td></td>
-         <td colspan=2>La empresa debe establecer el vocabulario común inicial para el negocio; las definiciones se usarán de manera uniforme en toda la empresa. Siempre que se requiera una nueva definición de datos, el esfuerzo de definición se coordinará y se conciliará con el "glosario" corporativo de descripciones de datos. El administrador de datos empresariales proporcionará esta coordinación.</td>
+         <td colspan=2>Se debe establecer un vocabulario común inicial para el negocio; las definiciones se usarán de manera uniforme en toda la plataforma. Siempre que se requiera una nueva definición de datos, el esfuerzo de definición se coordinará y se conciliará entre las partes involucradas siempre teniendo la desición final el negocio.</td>
       </tr>
         <tr>
          <td></td>
          <td colspan=2>Las ambigüedades resultantes de múltiples definiciones de datos deben dar paso a definiciones aceptadas en toda la empresa y su comprensión.
 Se deben asignar responsabilidades de administración de datos funcionales. Se deben coordinar múltiples iniciativas de estandarización de datos.</td>
-      </tr>   
-   </tbody>
-</table>
-
-<table>
-   <thead>
-      <tr>
-         <th rowspan=2>Nombre</th>
-         <td colspan=2 align="left">Seguridad de datos</td>
-      </tr>
-   </thead>
-   <tbody>
-      <tr>
-         <td align="center">Referencia</td>
-         <td colspan=2>TB_PI03</td>
-      </tr>
-      <tr>
-         <td align="center">Declaración</td>
-         <td colspan=2>Los datos están protegidos contra el uso y la divulgación no autorizados. Además de los aspectos tradicionales de las leyes de protección de datos, estos se incluyen, pero no limitan, la protección de información pre-decisional, sensible, sensible a la selección de fuente y propietaria.</td>
-      </tr>
-      <tr>
-         <td align="center">Razón Fundamental</td>
-         <td colspan=2>El intercambio abierto de información y la divulgación de información a través de la legislación pertinente deben equilibrarse con la necesidad de restringir la disponibilidad de información clasificada, privada y confidencial.
-Las leyes y regulaciones existentes requieren la salvaguarda de la seguridad nacional y la privacidad de los datos, al tiempo que permiten el acceso libre y gratuito. La información previa a la decisión (trabajo en progreso, aún no autorizado para su publicación) debe protegerse para evitar especulaciones injustificadas, malas interpretaciones y uso inapropiado.</td>
-      </tr>
-      <tr>
-         <td align="center">Implicaciones</td>
-         <td colspan=2>La agregación de datos, tanto clasificados como no, creará un gran objetivo que requerirá procedimientos de revisión y desclasificación para mantener el control apropiado. Los propietarios de datos y/o usuarios funcionales deben determinar si la agregación resulta en un mayor nivel de clasificación. Se necesitarán políticas y procedimientos apropiados para manejar esta revisión y desclasificación. El acceso a la información basada en una política de necesidad de conocer obligará a revisiones periódicas del cuerpo de información.</td>
-      </tr>
-      <tr>
-         <td></td>
-         <td colspan=2>Es necesario repensar la práctica actual de tener sistemas separados para contener diferentes clasificaciones. Para garantizar un acceso adecuado a la información abierta mientras se mantiene la información segura, la seguridad debe identificarse y desarrollarse a nivel de datos y no a nivel de aplicación.</td>
-      </tr>
-        <tr>
-         <td></td>
-         <td colspan=2>Se pueden establecer salvaguardas de seguridad de datos para restringir el acceso a "solo ver" o "nunca ver". Se debe determinar las etiquetas para acceder a información pre-decisional, decisional, clasificada, sensible o privada. La seguridad debe diseñarse en elementos de datos desde el principio; no se puede agregar después.</td>
-      </tr>
-        <tr>
-         <td></td>
-         <td colspan=2>Los sistemas, los datos y las tecnologías deben protegerse del acceso y la manipulación no autorizada. La información de la organización debe estar protegida contra alteraciones, sabotajes, desastres o revelaciones involuntarias o no autorizadas. Se necesitan nuevas políticas sobre la gestión de la duración de la protección para la información previa a la decisión y otros trabajos en curso, en consideración de la actualización del contenido.</td>
       </tr>   
    </tbody>
 </table>
@@ -467,7 +427,7 @@ Las leyes y regulaciones existentes requieren la salvaguarda de la seguridad nac
    <tbody>
       <tr>
          <td align="center">Referencia</td>
-         <td colspan=2>TB_PA01</td>
+         <td colspan=2>EE_PA01</td>
       </tr>
       <tr>
          <td align="center">Declaración</td>
@@ -475,8 +435,7 @@ Las leyes y regulaciones existentes requieren la salvaguarda de la seguridad nac
       </tr>
       <tr>
          <td align="center">Razón Fundamental</td>
-         <td colspan=2>Cuanto más un usuario tiene que entender la tecnología subyacente, menos productivo es ese usuario. La facilidad de uso es un incentivo positivo para el uso de aplicaciones. Alienta a los usuarios a trabajar dentro del entorno de información integrado en lugar de desarrollar sistemas aislados para realizar la tarea fuera del entorno de información integrado de Toures Balón. La mayor parte del conocimiento requerido para operar un sistema será similar a otros. La capacitación se mantiene al mínimo, y el riesgo de usar un sistema de manera inadecuada es bajo.
-El uso de una aplicación debe ser tan intuitivo como conducir un automóvil diferente.</td>
+         <td colspan=2>Cuanto más un usuario tiene que entender la tecnología subyacente, menos productivo es ese usuario. La facilidad de uso es un incentivo positivo para el uso de aplicaciones. Alienta a los usuarios a trabajar dentro del entorno de información integrado en lugar de desarrollar sistemas aislados para realizar la tarea fuera del entorno de información integrado de Toures Balón. La mayor parte del conocimiento requerido para operar un sistema será similar a otros. La capacitación se mantiene al mínimo, y el riesgo de usar un sistema de manera inadecuada es bajo. El uso de una aplicación debe ser tan intuitivo como el usar un celular diferente.</td>
       </tr>
       <tr>
          <td align="center">Implicaciones</td>
@@ -503,7 +462,7 @@ El uso de una aplicación debe ser tan intuitivo como conducir un automóvil dif
    <tbody>
       <tr>
          <td align="center">Referencia</td>
-         <td colspan=2>TB_PA02</td>
+         <td colspan=2>EE_PA02</td>
       </tr>
       <tr>
          <td align="center">Declaración</td>
@@ -534,7 +493,7 @@ El uso de una aplicación debe ser tan intuitivo como conducir un automóvil dif
    <tbody>
       <tr>
          <td align="center">Referencia</td>
-         <td colspan=2>TB_PA03</td>
+         <td colspan=2>EE_PA03</td>
       </tr>
       <tr>
          <td align="center">Declaración</td>
@@ -571,15 +530,15 @@ El uso de una aplicación debe ser tan intuitivo como conducir un automóvil dif
    <tbody>
       <tr>
          <td align="center">Referencia</td>
-         <td colspan=2>TB_PT01</td>
+         <td colspan=2>EE_PT01</td>
       </tr>
       <tr>
          <td align="center">Declaración</td>
-         <td colspan=2>El Software y Hardware de telecomunicaciones de Toures Balón deben seguir estándares que promuevan la interoperabilidad de datos, aplicaciones y tecnología. Adherirse a este principio facilita la integración de sistemas de información y soporte de diferentes proveedores de Software y Hardware.</td>
+         <td colspan=2>El Software y Hardware de la plataforma ElEdpen deben seguir estándares que promuevan la interoperabilidad de datos, aplicaciones y tecnología. Adherirse a este principio facilita la integración de sistemas de información y soporte de diferentes proveedores de Software y Hardware.</td>
       </tr>
       <tr>
          <td align="center">Razón Fundamental</td>
-         <td colspan=2>Este principio permite proteger las inversiones actuales de TI maximizando el retorno de inversión (ROI) y la reducción de costos de Toures Balón asociados a la dependencia de un proveedor de telecomunicaciones o de software.</td>
+         <td colspan=2>Este principio permite proteger las inversiones actuales de TI maximizando el retorno de inversión (ROI) y la reducción de costos del ElEdenApp asociados a la dependencia de un proveedor de telecomunicaciones o de software.</td>
       </tr>
       <tr>
          <td align="center">Implicaciones</td>
@@ -595,86 +554,6 @@ El uso de una aplicación debe ser tan intuitivo como conducir un automóvil dif
       </tr> 
    </tbody>
 </table>
-
-<table>
-   <thead>
-      <tr>
-         <th rowspan=2>Nombre</th>
-         <td colspan=2 align="left">Cambios oportunos al sistema empresarial de información</td>
-      </tr>
-   </thead>
-   <tbody>
-      <tr>
-         <td align="center">Referencia</td>
-         <td colspan=2>TB_PT02</td>
-      </tr>
-      <tr>
-         <td align="center">Declaración</td>
-         <td colspan=2>Los cambios en los sistemas de información de TI se deben implementar de manera oportuna al interior de la organización.</td>
-      </tr>
-      <tr>
-         <td align="center">Razón Fundamental</td>
-         <td colspan=2>El ambiente Empresarial de Información de Toures Balón debe responder a las necesidades de las personas que interactúan con él.</td>
-      </tr>
-      <tr>
-         <td align="center">Implicaciones</td>
-         <td colspan=2>Se necesita desarrollar un proceso que permita la gestión e implementación de cambios de forma oportuna y sin demora.</td>
-      </tr>
-      <tr>
-         <td></td>
-         <td colspan=2>Se necesita desarrollar un proceso que permita la gestión e implementación de cambios de forma oportuna y sin demora.</td>
-      </tr>
-        <tr>
-         <td></td>
-         <td colspan=2>Se deben actualizar las arquitecturas que reflejen los cambios realizados en la organización.</td>
-      </tr>
-   </tbody>
-</table>
-
-<table>
-   <thead>
-      <tr>
-         <th rowspan=2>Nombre</th>
-         <td colspan=2 align="left">Obsolescencia y deuda técnica. </td>
-      </tr>
-   </thead>
-   <tbody>
-      <tr>
-         <td align="center">Referencia</td>
-         <td colspan=2>TB_PT03</td>
-      </tr>
-      <tr>
-         <td align="center">Declaración</td>
-         <td colspan=2>Cualquier decisión táctica en Toures Balón que introduzca deuda técnica solo será aceptada si existe un plan de acción en el dominio tecnológico y financiero.</td>
-      </tr>
-      <tr>
-         <td align="center">Razón Fundamental</td>
-         <td colspan=2>El aumento de la deuda técnica sin abordar o identificar, incrementará la complejidad y el costo del mantenimiento de los sistemas de información de Toures Balón ya que dificultarán los procesos de transición de servicios y la entrega o creación de soluciones que el usuario demande.</td>
-      </tr>
-      <tr>
-         <td align="center">Implicaciones</td>
-         <td colspan=2>Se aceptarán deudas técnicas a corto plazo para satisfacer estrategias de negocios.</td>
-      </tr>
-      <tr>
-         <td></td>
-         <td colspan=2>Las aplicaciones y servicios deberán ser diseñados e implementados independientemente.</td>
-      </tr>
-        <tr>
-         <td></td>
-         <td colspan=2>Proyectos que se ejecuten adoptando metodologías agiles deberán necesitar un arquitecto con el objetivo de salvaguardar la introducción de nuevas deudas técnicas en los futuros sistemas de información.</td>
-      </tr>
-        <tr>
-         <td></td>
-         <td colspan=2>El software de TI y hardware deberá ser gestionado en un sistema de gestión de la configuración.</td>
-      </tr>   
-   </tbody>
-</table>
-
-
-
-
-
-
 
 ### Modelo de casos de uso
 
