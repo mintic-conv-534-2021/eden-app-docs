@@ -555,189 +555,7 @@ Se deben asignar responsabilidades de administración de datos funcionales. Se d
    </tbody>
 </table>
 
-### Modelo de casos de uso
-
-Los casos de uso se pueden ver rapidamente en el siguiene diagrama:
-
-| Rol | Descripción |
-| --- | --- |
-| Turista | Consultar los productos y servicios de la oferta turistica y comercial del municipio de La Tebaida |
-| Dueño de Organización | Crear y gestionar los recursos que permitan dar a conocer los productos y servicios a los turistas de una o mas organizaciones a su nombre. |
-| Administrador | Crear y gestionar categorias de empresa y de productos, asi como de gestionar la visibilidad de sus contenidos en la plataforma. |
-
-![alt text](../../diagrams/EE_DiagramaCasosDeUso_v1.0.jpg?raw=true)
-
-
-
-
-
-### Escenarios de atributos de calidad
-
-Debido a que son tablas complejas, preferimos que se remita a la fuenta para revisarlas.
-
-Fuente: [./content/arquitectura/source/requerimientos.xlsx - Hoja "escenarios"](./source/requerimientos.xlsx)
-
-### Restricciones
-
-De negocio:
-
-Tecnológicos: 
-
-Otros:
-
-### Preocupaciones arquitectónicas
-
-- Manejo de la configuración del servicio
-
-- Manejo de secretos del servicio
-
-- Observabilidad
-
-- Definición de métricas
-
-- Trazabilidad
-
-- Lineamientos de auditoría por registros.
-
-Gestión de errores y excepciones
-
-Procesamiento secuencial. Problemas de contingencia que afecten la escalabilidad
-
-*P-001: Fácil de operar y auditar*
-
-Se debe poder rastrear el estado de las peticiones, registro de casos excepcionales, errores técnicos y errores de negocio para facilitar la resolución de problemas en ambiente de producción.
-
-*P-002: Fácil de mantener*
-
-El servicio debe poderse adaptar a las necesidades del negocio y ser modificado rápidamente (TODO definir cuanto tiempo estimado base) por el equipo de desarrollo.
-
- 
-
-## Identificación y selección de conceptos de diseño
-
-### Arquitectura de referencia
-
-Estilo de arquitectura nuclear y patrones complementarios
-
-### Patrones de arquitectura
-
-Patrones de diseño 
-Basado en los patrones descritos en el libro [Microservices Pattern: A pattern language for microservices](https://microservices.io/patterns/) , [Cloud design patterns - Azure Architecture Center](https://docs.microsoft.com/en-us/azure/architecture/patterns/), [SOA Design Patterns](https://patterns.arcitura.com/soa-patterns).
-
-Fuente: [./content/arquitectura/source/requerimientos.xlsx - Hoja "patrones"](./source/requerimientos.xlsx)
-
-**Nota**: Si realiza un cambio en el excel de requerimientos, por favor actualice esta tabla con la herramienta [Table2Markdown](https://tabletomarkdown.com/)
-
-Tabla Patrones de diseño seleccionados para EdenApp
-
-TODO agregar tabla
-
-## Producción de estructuras
-
-### Estructura global
-
-En este diagrama se muestra una visión global del sistema:
-
-![Markitecture](../../diagrams/markitecture.png)
-
-
-### Identificación de estructuras que soporten la funcionalidad principal
-
-#### Modelo de dominio de alto nivel
-
-En la descomposición de la funcionalidad nos guiaremos con los siguientes principios:
-
-- *Single Responsability Principle*: Una clase debe tener solo una razón para cambiar. En nuestro caso aplica para los componentes/funciones internas del servicio.
-
-- *Common Closure Principle*: Las funciones dentro de la misma capa deben estar lo suficientemente juntas contra el mismo tipo de cambio. Un cambio en la capa afecta todos los componentes en esa capa. 
-
-Restricciones de la descomposición:
-
-Latencia de red
-
-Disponibilidad limitada debido a la comunicación síncrona.
-
-TODO agregar tabla de descompisción de funcionalidad.
-
-## Definición de interfaces
-
-### Interfaces externas
-
-Externamente las interfaces UI deben ser creadas con [React](https://reactjs.org/) para dos tipos de usuarios diferentes:
-
-- Aplicación [PWA](https://developers.google.com/web/ilt/pwa/) con un enfoque [Mobile-first](https://medium.com/@Vincentxia77/what-is-mobile-first-design-why-its-important-how-to-make-it-7d3cf2e29d00) para usuarios finales, en este caso visitantes o turistas.
-
-Los diseños de las vistas creados en Figma los puede ver [aquí](https://www.figma.com/proto/LLRFtLkKFzHDbscyIO0lD9/Prototipo-Copy?node-id=582%3A245&scaling=min-zoom&page-id=0%3A1)
-
-- Portal de administración para usuarios finales, en este caso dueños de comercio o administradores.
-
-Los diseños de las vistas creados en Figma los puede ver [aquí](TODO )
-
-### Interfaces internas
-
-#### Estrategia de diseño API-first
-
-Con el fin de agilizar la participación de los interesados en consumir este servicio e integrar las valiosos aportes que estos nos pueden proveer durante el proceso de desarrollo e implementación se propone la estrategia de diseño API-first en donde el equipo se concentra en definir las interfaces a través de las cuales se expondrán las capacidades de los servicios Backend a la aplicación PWA para clientes y el Portal de administración.
-
-El uso de un estilo REST para la interfaz y OpenAPI, impacta AC-4: Interoperabilidad y AC-7: Capacidad de aprendizaje.
-
-- Puede consultar las API aquí: TODO agregar link de interfaz swagger.
-
-
-## Vistas de arquitectura: modelo 4+1
-
-Para la documentación de la arquitectura el equipo se decantó por el modelo 4+1 por ser el mas aceptado y manejado dentro de la industria, ademas de la experiencia que tienen los integrantes del equipo con este tipo de vistas.
-
-La herramienta para la creación de los diagramas es [draw.io](https://draw.io), no es la mas apropiada para realizar este tipo de diagramas, sin embargo nuestro enfoque es la practicidad ademas de ser una herramienta disponible y facil de usar para cualquier persona que deseé modificar y actualizar las vistas.
-
-### Vista lógica
-
-### Vista de procesos
-
-Para mayor detalle puede visitar [Procesos de negocio](../procesos/procesos-negocio.md)
-
-### Vista física
-
-### Vista de desarrollo
-
-### Vista de Escenarios
-
-## Evaluación con ATAM
-
-TODO evaluación ATAM, Workshop interno, grabarlo y subirlo al classroom.
-
-
-## Restricciones
-
-| **CÓDIGO** | **DESCRIPCIÓN** |
-| --- | --- |
-| R001 | Cada proveedor, independientemente de su tipo utiliza diferentes mecanismos de interacción |
-| R002 | Es fundamental que el proceso no se vea viciado con ninguna decisión de tecnología |
-| R003 | Los proveedores pueden no estar disponibles o variar con el tiempo |
-| R004 | Capacidad de cambiar condiciones o reglas de negocio sin tener que re-desplegar el sistema |
-| R005 | Capacidad de respuesta de las funcionalidades del negocio para temporadas altas |
-| R006 | Soporte de canales de atención a través de la Web, dispositivos móviles y nuevas interfaces de interacción |
-| R007 | Soporte de operación del negocio 24x7x365, se espera disponibilidad del 99.999 |
-| R008 | Las peticiones de consulta de productos no deben tardar más de 1.5 segundos promedio por usuario. |
-| R009 | Ninguna petición puede tardar más de 3 segundos por usuario. |
-| R010 | El servicio de pagos debe soportar pagos por VISA, MasterCard, AMEX, Discover y PayPal. |
-
-## Requisitos
-
-| **CÓDIGO** | **DESCRIPCIÓN** |
-| --- | --- |
-| RQ001 | La implementación de los proveedores y su interacción con el proceso sea desacoplada. Esto apoyado por servicios federados que interactúen como abstracciones para el proceso. |
-| RQ002 | Integrar nuevos proveedores debe tener el menor impacto para la arquitectura y sus componentes, limitando los componentes que deben verse modificados. Preferiblemente un nuevo proveedor debería ser plug & play para tecnologías que ya son soportadas. |
-| RQ003 | Dependiendo de la negociación con el proveedor, estos pueden tener un mayor peso cuando se está realizando las búsquedas de opciones, de manera que se puedan ofrecer como los preferidos. Esos valores pueden cambiar dinámicamente dependiendo de nuevas condiciones de negocio. |
-| RQ004 | La forma en que se debe mostrar los resultados debe tener en cuenta: Peso del convenio 50% (1-10) + Calificación de los usuarios 50% (1-10). Los porcentajes pueden cambiar con el tiempo. |
-| RQ005 | La comunicación con los proveedores puede tardar algunos segundos, así que se espera que se pueda realizar una comunicación en paralelo para poder así aprovechar mejor los recursos de cómputo y también como manejar los fallos. |
-| RQ006 | Análisis de datos sobre el comportamiento de los visitantes del sitio para procesos de mejora de la experiencia de usuario y campañas comerciales |
-| RQ007 | El sitio debe soportar Full-Text Search en la búsqueda de productos. Debe soportar resultados similares para nunca mostrar 0 resultados |
-| RQ008 | El sitio debe ser responsive, este requerimiento tienen prioridad sobre cualquier desarrollo de app móvil |
-| RQ009 | El sistema debe poder satisfacer los incrementos de la demanda sin sacrificar su capacidad de respuesta, en otras palabra, atender a 100 usuario o 100 mil usuarios debería ser equivalente |
-| RQ0010 | La aplicación en general debe estar libre de al menos el Top 10 de riesgos mencionados por OWASP, en su última edición. |
-
-# VISTAS DE ARQUITECTURA
+## VISTAS DE ARQUITECTURA - MODELO 4 + 1
 
 ## Vista de Escenarios
 
@@ -984,6 +802,192 @@ TODO evaluación ATAM, Workshop interno, grabarlo y subirlo al classroom.
       </tr>
    </tbody>
 </table>
+
+
+
+
+
+### Modelo de Casos de Uso
+
+A continuación, se definen los principales roles que a tráves del event storming se lograron identificar:
+
+| Rol | Descripción |
+| --- | --- |
+| Turista | Consultar los productos y servicios de la oferta turistica y comercial del municipio de La Tebaida |
+| Dueño de Organización | Crear y gestionar los recursos que permitan dar a conocer los productos y servicios a los turistas de una o mas organizaciones a su nombre. |
+| Administrador | Crear y gestionar categorias de empresa y de productos, así como de gestionar la visibilidad de sus contenidos en la plataforma. |
+
+![alt text](../../diagrams/EE_DiagramaCasosDeUso_v1.0.jpg?raw=true)
+
+### Escenarios de atributos de calidad
+
+Debido a que son tablas complejas, preferimos que se remita a la fuenta para revisarlas.
+
+Fuente: [./content/arquitectura/source/requerimientos.xlsx - Hoja "escenarios"](./source/requerimientos.xlsx)
+
+### Restricciones
+
+De negocio:
+
+Tecnológicos: 
+
+Otros:
+
+### Preocupaciones arquitectónicas
+
+- Manejo de la configuración del servicio
+
+- Manejo de secretos del servicio
+
+- Observabilidad
+
+- Definición de métricas
+
+- Trazabilidad
+
+- Lineamientos de auditoría por registros.
+
+Gestión de errores y excepciones
+
+Procesamiento secuencial. Problemas de contingencia que afecten la escalabilidad
+
+*P-001: Fácil de operar y auditar*
+
+Se debe poder rastrear el estado de las peticiones, registro de casos excepcionales, errores técnicos y errores de negocio para facilitar la resolución de problemas en ambiente de producción.
+
+*P-002: Fácil de mantener*
+
+El servicio debe poderse adaptar a las necesidades del negocio y ser modificado rápidamente (TODO definir cuanto tiempo estimado base) por el equipo de desarrollo.
+
+ 
+
+## Identificación y selección de conceptos de diseño
+
+### Arquitectura de referencia
+
+Estilo de arquitectura nuclear y patrones complementarios
+
+### Patrones de arquitectura
+
+Patrones de diseño 
+Basado en los patrones descritos en el libro [Microservices Pattern: A pattern language for microservices](https://microservices.io/patterns/) , [Cloud design patterns - Azure Architecture Center](https://docs.microsoft.com/en-us/azure/architecture/patterns/), [SOA Design Patterns](https://patterns.arcitura.com/soa-patterns).
+
+Fuente: [./content/arquitectura/source/requerimientos.xlsx - Hoja "patrones"](./source/requerimientos.xlsx)
+
+**Nota**: Si realiza un cambio en el excel de requerimientos, por favor actualice esta tabla con la herramienta [Table2Markdown](https://tabletomarkdown.com/)
+
+Tabla Patrones de diseño seleccionados para EdenApp
+
+TODO agregar tabla
+
+## Producción de estructuras
+
+### Estructura global
+
+En este diagrama se muestra una visión global del sistema:
+
+![Markitecture](../../diagrams/markitecture.png)
+
+
+### Identificación de estructuras que soporten la funcionalidad principal
+
+#### Modelo de dominio de alto nivel
+
+En la descomposición de la funcionalidad nos guiaremos con los siguientes principios:
+
+- *Single Responsability Principle*: Una clase debe tener solo una razón para cambiar. En nuestro caso aplica para los componentes/funciones internas del servicio.
+
+- *Common Closure Principle*: Las funciones dentro de la misma capa deben estar lo suficientemente juntas contra el mismo tipo de cambio. Un cambio en la capa afecta todos los componentes en esa capa. 
+
+Restricciones de la descomposición:
+
+Latencia de red
+
+Disponibilidad limitada debido a la comunicación síncrona.
+
+TODO agregar tabla de descompisción de funcionalidad.
+
+## Definición de interfaces
+
+### Interfaces externas
+
+Externamente las interfaces UI deben ser creadas con [React](https://reactjs.org/) para dos tipos de usuarios diferentes:
+
+- Aplicación [PWA](https://developers.google.com/web/ilt/pwa/) con un enfoque [Mobile-first](https://medium.com/@Vincentxia77/what-is-mobile-first-design-why-its-important-how-to-make-it-7d3cf2e29d00) para usuarios finales, en este caso visitantes o turistas.
+
+Los diseños de las vistas creados en Figma los puede ver [aquí](https://www.figma.com/proto/LLRFtLkKFzHDbscyIO0lD9/Prototipo-Copy?node-id=582%3A245&scaling=min-zoom&page-id=0%3A1)
+
+- Portal de administración para usuarios finales, en este caso dueños de comercio o administradores.
+
+Los diseños de las vistas creados en Figma los puede ver [aquí](TODO )
+
+### Interfaces internas
+
+#### Estrategia de diseño API-first
+
+Con el fin de agilizar la participación de los interesados en consumir este servicio e integrar las valiosos aportes que estos nos pueden proveer durante el proceso de desarrollo e implementación se propone la estrategia de diseño API-first en donde el equipo se concentra en definir las interfaces a través de las cuales se expondrán las capacidades de los servicios Backend a la aplicación PWA para clientes y el Portal de administración.
+
+El uso de un estilo REST para la interfaz y OpenAPI, impacta AC-4: Interoperabilidad y AC-7: Capacidad de aprendizaje.
+
+- Puede consultar las API aquí: TODO agregar link de interfaz swagger.
+
+
+## Vistas de arquitectura: modelo 4+1
+
+Para la documentación de la arquitectura el equipo se decantó por el modelo 4+1 por ser el mas aceptado y manejado dentro de la industria, ademas de la experiencia que tienen los integrantes del equipo con este tipo de vistas.
+
+La herramienta para la creación de los diagramas es [draw.io](https://draw.io), no es la mas apropiada para realizar este tipo de diagramas, sin embargo nuestro enfoque es la practicidad ademas de ser una herramienta disponible y facil de usar para cualquier persona que deseé modificar y actualizar las vistas.
+
+### Vista lógica
+
+### Vista de procesos
+
+Para mayor detalle puede visitar [Procesos de negocio](../procesos/procesos-negocio.md)
+
+### Vista física
+
+### Vista de desarrollo
+
+### Vista de Escenarios
+
+## Evaluación con ATAM
+
+TODO evaluación ATAM, Workshop interno, grabarlo y subirlo al classroom.
+
+
+## Restricciones
+
+| **CÓDIGO** | **DESCRIPCIÓN** |
+| --- | --- |
+| R001 | Cada proveedor, independientemente de su tipo utiliza diferentes mecanismos de interacción |
+| R002 | Es fundamental que el proceso no se vea viciado con ninguna decisión de tecnología |
+| R003 | Los proveedores pueden no estar disponibles o variar con el tiempo |
+| R004 | Capacidad de cambiar condiciones o reglas de negocio sin tener que re-desplegar el sistema |
+| R005 | Capacidad de respuesta de las funcionalidades del negocio para temporadas altas |
+| R006 | Soporte de canales de atención a través de la Web, dispositivos móviles y nuevas interfaces de interacción |
+| R007 | Soporte de operación del negocio 24x7x365, se espera disponibilidad del 99.999 |
+| R008 | Las peticiones de consulta de productos no deben tardar más de 1.5 segundos promedio por usuario. |
+| R009 | Ninguna petición puede tardar más de 3 segundos por usuario. |
+| R010 | El servicio de pagos debe soportar pagos por VISA, MasterCard, AMEX, Discover y PayPal. |
+
+## Requisitos
+
+| **CÓDIGO** | **DESCRIPCIÓN** |
+| --- | --- |
+| RQ001 | La implementación de los proveedores y su interacción con el proceso sea desacoplada. Esto apoyado por servicios federados que interactúen como abstracciones para el proceso. |
+| RQ002 | Integrar nuevos proveedores debe tener el menor impacto para la arquitectura y sus componentes, limitando los componentes que deben verse modificados. Preferiblemente un nuevo proveedor debería ser plug & play para tecnologías que ya son soportadas. |
+| RQ003 | Dependiendo de la negociación con el proveedor, estos pueden tener un mayor peso cuando se está realizando las búsquedas de opciones, de manera que se puedan ofrecer como los preferidos. Esos valores pueden cambiar dinámicamente dependiendo de nuevas condiciones de negocio. |
+| RQ004 | La forma en que se debe mostrar los resultados debe tener en cuenta: Peso del convenio 50% (1-10) + Calificación de los usuarios 50% (1-10). Los porcentajes pueden cambiar con el tiempo. |
+| RQ005 | La comunicación con los proveedores puede tardar algunos segundos, así que se espera que se pueda realizar una comunicación en paralelo para poder así aprovechar mejor los recursos de cómputo y también como manejar los fallos. |
+| RQ006 | Análisis de datos sobre el comportamiento de los visitantes del sitio para procesos de mejora de la experiencia de usuario y campañas comerciales |
+| RQ007 | El sitio debe soportar Full-Text Search en la búsqueda de productos. Debe soportar resultados similares para nunca mostrar 0 resultados |
+| RQ008 | El sitio debe ser responsive, este requerimiento tienen prioridad sobre cualquier desarrollo de app móvil |
+| RQ009 | El sistema debe poder satisfacer los incrementos de la demanda sin sacrificar su capacidad de respuesta, en otras palabra, atender a 100 usuario o 100 mil usuarios debería ser equivalente |
+| RQ0010 | La aplicación en general debe estar libre de al menos el Top 10 de riesgos mencionados por OWASP, en su última edición. |
+
+# VISTAS DE ARQUITECTURA
+
+
 
 ### Atributos de Calidad
 
