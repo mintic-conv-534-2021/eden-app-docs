@@ -557,13 +557,19 @@ Se deben asignar responsabilidades de administración de datos funcionales. Se d
 
 ## VISTAS DE ARQUITECTURA - MODELO 4 + 1
 
-## Vista de Escenarios
+Para la documentación de la arquitectura el equipo se decantó por el modelo 4+1 por ser el mas aceptado y manejado dentro de la industria, ademas de la experiencia que tienen los integrantes del equipo con este tipo de vistas.
+
+La herramienta para la creación de los diagramas es [diagrams.net](https://app.diagrams.net/), no es la mas apropiada para realizar este tipo de diagramas, sin embargo nuestro enfoque es la practicidad ademas de ser una herramienta disponible y facil de usar para cualquier persona que deseé modificar y actualizar las vistas.
+
+### Preocupaciones de la arquitectura
+
+A continuación se detallan las principales preocupaciones que permitiran tomar deciones sobre los artefactos o componentes de la arquitectura.
 
 <table>
    <thead>
       <tr>
          <th rowspan=2>FIABILIDAD</th>
-         <td colspan=2 align="left">Capacidad de un sistema o componente para desempeñar  las funciones especificadas, cuando se usa bajo unas condiciones y periodo de tiempo determinados.</td>
+         <td colspan=2 align="left">Def. Capacidad de un sistema o componente para desempeñar  las funciones especificadas, cuando se usa bajo unas condiciones y periodo de tiempo determinados.</td>
       </tr>
       <tr>
          <th>DISPONIBILIDAD</th>
@@ -573,7 +579,7 @@ Se deben asignar responsabilidades de administración de datos funcionales. Se d
    <tbody>
       <tr>
          <td align="center">1</td>
-         <td colspan=2>¿Cuanto tiempo esperamos soportar ante la indisponibildiad de un proveedor?</td>
+         <td colspan=2>¿Cuanto tiempo esperamos soportar ante la indisponibildiad de la plataforma de ElEdenApp?</td>
       </tr>
       <tr>
          <td align="center">2</td>
@@ -582,10 +588,6 @@ Se deben asignar responsabilidades de administración de datos funcionales. Se d
       <tr>
          <td align="center">3</td>
          <td colspan=2>¿Que estrategia se realizará para cumplir el tiempo medio de reparacion del sistema (5 minutos) ante una caida?</td>
-      </tr>
-      <tr>
-         <td align="center">4</td>
-         <td colspan=2>¿Que estrategia se realizará si el sistema del proveedor no se encuentra disponible?</td>
       </tr>
       <tr>
          <td align="center">5</td>
@@ -630,31 +632,27 @@ Se deben asignar responsabilidades de administración de datos funcionales. Se d
       </tr>
       <tr>
          <th>ADAPTABILIDAD</th>
-         <td align="left">Capacidad del producto que le permite ser adaptado de forma efectiva y eficiente a diferentes entornos determinados de hardware, software, operacionales o de uso.</td>
+         <td align="left">Def. Capacidad del producto que le permite ser adaptado de forma efectiva y eficiente a diferentes entornos determinados de hardware, software, operacionales o de uso.</td>
       </tr>
       <tr>
          <td align="center">1</td>
-         <td colspan=2>¿Cuales protocolos utilizaremos para integrarnos con los proveedores?</td>
-      </tr>
-      <tr>
-         <td align="center">2</td>
          <td colspan=2>¿Qué estandares de comunicación utilizaremos internamente?</td>
       </tr>
       <tr>
-         <td align="center">3</td>
+         <td align="center">2</td>
          <td colspan=2>¿Cual es la mejor estrategia para realizar una comunicacion entre los componentes de manera adaptable?</td>
       </tr>
       <tr>
-         <td align="center">4</td>
+         <td align="center">3</td>
          <td colspan=2>¿A que componentes somos adaptables y a que componentes no somos adaptables?</td>
       </tr>
       <tr>
-         <td align="center">5</td>
-         <td colspan=2>¿Que esfuerzo requerira adaptar un nuevo componente sin encesidad de cambiar la definicion de la arquitectura?</td>
+         <td align="center">4</td>
+         <td colspan=2>¿Que esfuerzo requerira adaptar un nuevo componente sin necesidad de cambiar la definición de la arquitectura?</td>
       </tr>
       <tr>
-         <td align="center">6</td>
-         <td colspan=2>¿Si un proveedor cambiara su estandar de integracion que tanto afectara nuestra arquitectura?</td>
+         <td align="center">5</td>
+         <td colspan=2>¿Si se quisiera agregar un nuevo modulo o tipo de organizacion que tanto afectara nuestra arquitectura?</td>
       </tr>
       <tr>
          <td></td>
@@ -667,7 +665,7 @@ Se deben asignar responsabilidades de administración de datos funcionales. Se d
       </tr>
       <tr>
          <td align="center">2</td>
-         <td colspan=2>¿Cual es el alcance de las configuraciones sobre la definicion de la arquitectura?</td>
+         <td colspan=2>¿Cual es el alcance de las configuraciones sobre la definición de la arquitectura?</td>
       </tr>
       <tr>
          <td align="center">3</td>
@@ -679,7 +677,7 @@ Se deben asignar responsabilidades de administración de datos funcionales. Se d
       </tr>
       <tr>
          <td align="center">5</td>
-         <td colspan=2>¿Como se asegurara que al ralizar una configuracion no se afectara el sistema?</td>
+         <td colspan=2>¿Como se asegurara que al ralizar una configuración no se afectará el sistema?</td>
       </tr>
       <tr>
          <td align="center">6</td>
@@ -695,7 +693,7 @@ Se deben asignar responsabilidades de administración de datos funcionales. Se d
       </tr>
       <tr>
          <th rowspan=2>MANTENIBILIDAD</th>
-         <td colspan=2 align="left">Esta característica representa la capacidad del producto software para ser modificado efectiva y eficientemente, debido a necesidades evolutivas, correctivas o perfectivas.</td>
+         <td colspan=2 align="left">Def. Esta característica representa la capacidad del producto software para ser modificado efectiva y eficientemente, debido a necesidades evolutivas, correctivas o perfectivas.</td>
       </tr>
       <tr>
          <th>MODIFICABILIDAD</th>
@@ -728,7 +726,7 @@ Se deben asignar responsabilidades de administración de datos funcionales. Se d
       <tr>
          <td></td>
          <th>MODULARIDAD</th>
-         <td align="left">Capacidad de un sistema o programa de ordenador (compuesto de componentes discretos) que permite que un cambio en un componente tenga un impacto mínimo en los demás.</td>
+         <td align="left">Def. Capacidad de un sistema o programa de ordenador (compuesto de componentes discretos) que permite que un cambio en un componente tenga un impacto mínimo en los demás.</td>
       </tr>
       <tr>
          <td align="center">1</td>
@@ -736,11 +734,11 @@ Se deben asignar responsabilidades de administración de datos funcionales. Se d
       </tr>
       <tr>
          <td align="center">2</td>
-         <td colspan=2>¿Que estrategia se realizará para asegurar que un modulo no realice mas de dos respondabilidades?</td>
+         <td colspan=2>¿Que estrategia se realizará para asegurar que un servicio no realice mas de dos respondabilidades?</td>
       </tr>
       <tr>
          <td align="center">3</td>
-         <td colspan=2>¿que estrategia se realizara para asegurar la conhesión de los componentes del sistema?</td>
+         <td colspan=2>¿que estrategia se realizará para asegurar la conhesión de los componentes del sistema?</td>
       </tr>
       <tr>
          <td align="center">4</td>
@@ -756,24 +754,20 @@ Se deben asignar responsabilidades de administración de datos funcionales. Se d
       </tr>
       <tr>
          <td align="center">1</td>
-         <td colspan=2>¿Cuál es el impacto en el rendimiento en la integracion de un proveedor delgado frente a uno pesado?</td>
-      </tr>
-      <tr>
-         <td align="center">2</td>
          <td colspan=2>¿Cual es la estrategia que garantizará la distribucion y el equilibrio de la carga de hits en el sistema?</td>
       </tr>
       <tr>
-         <td align="center">3</td>
+         <td align="center">2</td>
          <td colspan=2>Si varios mensajes de eventos llegan a una cola de mensajes compartida, ¿cuál es la estrategia de priorización en el procesamiento/atención? </td>
       </tr>
       <tr>
          <td></td>
          <th>UTILIZACIÓN DE RECURSOS</th>
-         <td align="left">Las cantidades y tipos de recursos utilizados cuando el software lleva a cabo su función bajo condiciones determinadas.</td>
+         <td align="left">Def. Las cantidades y tipos de recursos utilizados cuando el software lleva a cabo su función bajo condiciones determinadas.</td>
       </tr>
       <tr>
          <td align="center">1</td>
-         <td colspan=2>¿Que componentes/artefactos utilizan un protocolo de comunicacion sincrónico o asincrónico?</td>
+         <td colspan=2>¿Que componentes/artefactos utilizan un protocolo de comunicación sincrónico o asincrónico?</td>
       </tr>
       <tr>
          <td align="center">2</td>
@@ -790,7 +784,7 @@ Se deben asignar responsabilidades de administración de datos funcionales. Se d
       <tr>
          <td></td>
          <th>CAPACIDAD</th>
-         <td align="left">Grado en que los límites máximos de un parámetro de un producto o sistema software cumplen con los requisitos.</td>
+         <td align="left">Def. Grado en que los límites máximos de un parámetro de un producto o sistema software cumplen con los requisitos.</td>
       </tr>
       <tr>
          <td align="center">1</td>
@@ -803,9 +797,9 @@ Se deben asignar responsabilidades de administración de datos funcionales. Se d
    </tbody>
 </table>
 
+### Atributos de Calidad
 
-
-
+![alt text](../../diagrams/EE_DiagramaArbolUtilidad_v1.0.jpg?raw=true)
 
 ### Modelo de Casos de Uso
 
@@ -819,19 +813,219 @@ A continuación, se definen los principales roles que a tráves del event stormi
 
 ![alt text](../../diagrams/EE_DiagramaCasosDeUso_v1.0.jpg?raw=true)
 
+### Definición de Ambientes 
+
+| **AMBIENTE** | **DESCRIPCIÓN** |
+| --- | --- |
+| Carga Normal | Entorno operando dentro de parametros de carga normal, este hace uso de los recursos computacionales esperados para satisfacer la demanda de consumo garantizando los atributos de calidad. Este ambiente se caracteriza por presentar la navegación de 4 usuarios concurrentes. |
+| Sobre Carga | Ambiente esperado en periodos de alto acceso y aumento de carga transaccional, dónde se presentan el aumento número de peticiones y concurrencia el misma. Este ambiente se caracteriza por presentar la navegación de 12 usuarios de forma concurrentes. |
+| Intermitente | Sistema el cual no presenta indisponibilidad de cobertura de acceso por errores de aplicación o de agentes externos que proveen los servicios. Este ambiente se caracteriza por la indisponibilidad de una de las zonas del proveedor de nube publica utilizado |
+
+### Escenarios de Calidad 
+
+Para la definición de los escenarios a evaluar se escogieron los atributos de calidad con importancia evaluada en ALTA y riesgo ALTO. 
+A continuación, se detallan cada uno de los escenarios:
+
+| **Escenario** | El tiempo de carga de la página principal y el catálogo no debe ser superior a 1 segundo para los turistas que acceden al sitio web o a la app mediante una conexión móvil 4G. | 
+| --- | --- |
+| **Atributo de Calidad** | Desempeño - Actuación |
+| **Ambiente** | Operación Normal, Operación Modo emergente, Operación con Sobrecarga. |
+| **Fuente del Estimulo** | Puede ser un turista, una organización o un administrador |
+| **Estimulo** | El usuario ingresa al home de ElEdenApp y realiza la consulta del catálogo de organización o de productos y servicios, realizando transacciones que están centradas en la consulta. |
+| **Respuesta** | En condiciones de funcionamiento normal con 4 turistas concurrentes usan el sistema, con tiempos de respuesta dentro de niveles esperados, en condiciones de sobrecarga con 10 usuarios concurrente los tiempos deben estar sobre los aceptados. |
+| **Medición Respuesta** | Se debe cargar la pantalla del home y del catálogo en un tiempo menor a 1000 milisegundos: |
+|| - 800 milisegundos – Esperado|
+|| - 1000 - 1200 milisegundos – Aceptable |
+|| - > 1200 - No tolerable |
+| **Decisiones de Arquitectura** | Para garantizar el desempeño solicitado se decide desplegar los servicios en una infraestructura en la nube, que permiten escalar a nivel horizontal máquinas y a nivel vertical capacidad de CPU, Memoria y Disco. Se plantea sobre una arquitectura de microservicios para tener definidas las responsabilidades de la carga y poder soportar grandes masas de clientes en épocas especiales como ferias, fiestas decembrina u otros de mayor cantidad de consumos. |
+| **Puntos de Sensibilidad** | Un mal diseño e implementación en los componentes y artefactos podría incrementar los recursos usados y a la vez el auto escalado no sería el óptimo. |
+| **Trade-Off** | La imagen de la plataforma con respecto a la disponibilidad y capacidad de respuesta será percibida por el turista y las organizaciones como optima ya que estaremos respondiendo en tiempos menores a 1 segundo, sin embargo, esto traduce es posible incremento en el OPEX |
+| **Riesgos** | - Se pueden evidenciar cobros variantes y no fijos en los servicios de tecnología que ofrece el servidor de nube. |
+|| - La plataforma podrá crecer o decrecer su capacidad de tecnología acorde a las necesidades de negocio. |
+
+| **Escenario** |	En operación de alta carga se debe soportar hasta 24 usuarios concurrentes por segundo, equivalentes a 240 transacciones por segundo. |
+| --- | --- |
+| **Atributo de Calidad** |	Desempeño - Rendimiento |
+| **Ambiente** |	Operación con Sobrecarga. |
+| **Estimulo** |	El turista ingresa al home de ElEdenApp y realiza la consulta y/o compra de un evento del catálogo, realizando transacciones que están centradas en la búsqueda y adquisición. |
+| **Respuesta** |	En condiciones de sobrecarga con 24 usuarios concurrentes usando la plataforma, se deben evidenciar tiempos de respuesta dentro de niveles aceptados
+| **Medición Respuesta** |	Se debe cargar la pantalla del home y del catálogo en un tiempo menor a 1000 milisegundos: |
+|| - 1000 milisegundos – Esperado |
+|| - 1200 - 1600 milisegundos – Aceptable |
+|| - > 1600 milisegundos  - No tolerable |
+| **Decisiones de Arquitectura** |	Para garantizar este desempeño se decide desplegar los servicios en una infraestructura en la nube, los cuales permiten realizar un escalamiento horizontal y vertical de los recursos. En los servicios o artefactos donde la persistencia de datos es alta se priorizará la gestión sobre base de datos en memoria/cache. Los servicios no deben tener una orquestación de más de 3 servicios para cumplir su funcionalidad.  Con el fin de soportar la carga de usuarios se opta por contenido almacenado en la nube y gestionado por el proveedor de nube pública. |
+| **Puntos de Sensibilidad** |	Una mala implementación en los servicios podría incrementar el uso de recursos y también el proceso de auto escalado. |
+| **Trade-Off** |	La imagen de la organizacion con respecto a la disponibilidad y capacidad de respuesta será percibida por el turista como optima ya que estaremos respondiendo en tiempos menores a 1 segundo, sin embargo, esto traduce es posible incremento en el OPEX |
+| **Riesgos** | - La plataforma podrá crecer o decrecer su capacidad de tecnología acorde a las necesidades del negocio|
+|| - Se pueden evidenciar cobros variantes y no fijos en los servicios de tecnología que ofrece el servidor de nube|
+|| - Ante la caída de alguno de los recursos se podrán presentar latencias mientras se realiza el aprovisionamiento de los recursos nuevamente. |
+
+| **Escenario** |	Un usuario no autorizado intenta acceder al sistema de administración en un entorno operativo normal. Los procesos de seguridad en el sistema deben garantizar que los usuarios no autenticados no tengan acceso. El sistema debe mantener las contraseñas y la información confidencial relacionada con el usuario de forma adecuada.
+| --- | --- |
+| **Atributo de Calidad** |	Seguridad – Autenticación |
+| **Ambiente** |	Operación Normal, Operación Modo emergente, Operación con Sobrecarga. |
+| **Fuente del Estimulo** |	Usuario final |
+| **Estimulo** |	El usuario ingresa al home de toures balón, intenta acceder por medio de url a la sección de administración de organizaciones o productos sin registrarse en el sistema. |
+| **Respuesta	El sistema** | realiza la validación de usuario en dos frentes, frontend y backend por medio de token de autenticación. |
+| **Medición** | Respuesta	Retorna un mensaje de error en el cual se informe que no se tiene acceso al recurso requerido |
+| **Decisiones de Arquitectura** |	Para cubrir este requerimiento de seguridad, se realizará la implementación del patrón API Gateway el cual permite la configuración para evitar inyecciones de Código y control de acceso a recursos por medio de autenticación de usuarios. |
+| **Puntos de Sensibilidad** |	Error de configuración en los recursos que permitan el acceso no autorizado |
+| **Trade-Off** |	Brindar al usuario final una alta garantía de seguridad con respecto al resguardo de su información privada. |
+| **Riesgos** | Errores en la configuración de seguridad de los recursos que la requirieren |
+
+| **Escenario** |	El sistema debe tener la capacidad de cambiar condiciones o reglas de negocio sin tener que re-desplegar la plataforma y sin generar indisponibilidades. |
+| --- | --- |
+| **Atributo de Calidad** |	Modificabilidad |
+| **Estímulo** |	Despliegue de las nuevas reglas de negocio |
+| **Fuente del Estímulo** |	Usuario administrativo realiza cambio de regla de negocio |
+| **Ambiente de Operación** |	Ambiente de operación Normal |
+| **Respuesta** |	Las nuevas consultas sobre nuevas organizaciones, categorias o productos deben operar de forma trasparente |
+| **Medición de la Respuesta** |	Las nuevas configuraciones deberán ser registradas en la base de datos con el nuevo código de identificación |
+| **Decisiones de Arquitectura** |	En la implementación de la arquitectura se desplegará un aplicativo que permita la configuración y despliegue de reglas de negocio sin la necesidad de redesplegar todo el sistema y que actualizará los cambios de forma automática sin ser retroactiva. |
+| **Puntos de Sensibilidad** |	El número concurrente de consulta afecta el desempeño de la base de datos. |
+| **Trade-Off** |	El rendimiento de la base de datos podrá afectar el tiempo de respuesta del sistema dada una contención de recursos. |
+| **Riesgos** |	Rendimiento del sistema y tiempo de respuesta en las transacciones de compra |
+
+| **Escenario** |	El sistema debe tener la capacidad de agregar nuevos productos y organizaciones sin restricciones de características y sin que esto sea traumático. |
+| --- | --- |
+| **Atributo de Calidad** |	Modificabilidad |
+| **Estímulo** |	Activacion de la nueva organizacion en la interfaz web administrativa del sitio Web |
+| **Fuente del Estímulo** |	Usuario administrativo activa una nueva organizacion |
+| **Ambiente de Operación** |	Ambiente de operación Normal |
+| **Respuesta** |	La página de resultado de búsquedas deberá mostrar las organizaciones activas con sus respectivos productos. |
+| **Medición de la Respuesta** |	Consulta exitosa de la organizacion o producto. |
+| **Decisiones de Arquitectura** |	Para garantizar la facilidad de ingresar una nueva organizacion o producto se define un servicio basado en el patrón Intermediate Routing para conectarse a los diferentes servicios de las organizaciones. |
+| **Puntos de Sensibilidad** |	Aumento de la mantenibilidad de la arquitectura de ElEdenApp por ser un conjunto de servicios determinados los que tienen la responsabilidad de realizar la integración con las entidades. |
+| **Trade-Off** |	Disminución o dependencia de la interfaz de comunicación y de datos de la nueva organización agregada. |
+| **Riesgos** |	Implementación y complejidad con la adicción de nuevo servicios asociados con auditoria y seguridad. |
+
+| **Escenario** |	El sistema debe ser capaz de crecer y decrecer dinámicamente según la demanda. Este caso en especial se ve reflejado en las fechas como ferias y fiestas decembrinas en donde la demanda por los servicios puede crecer hasta 250% sobre la operación normal. |
+| --- | --- |
+| **Atributo de Calidad** |	Escalabilidad |
+| **Estímulo** |	Consultas(Transacciones) en el portal Web de ElEdenApp de un producto u organización |
+| **Fuente del Estímulo** |	Consulta de turista en el portal |
+| **Ambiente de Operación** |	Ambiente de operación con sobre carga |
+| **Respuesta** |	El número de instancias de pods/Docker deberá aumentar según política de escalado horizontal(consumo de CPU - memoria). |
+| **Medición de la respuesta** |	Número de pods/Docker creados dinámicamente durante el ambiente de sobrecarga |
+| **Decisiones de Arquitectura** |	La arquitectura para implementar deberá ser implementada en una tecnología que permite el escalamiento de forma automática (Orquestador de Docker como Kuberntes, RANCHOS o GKC) |
+| **Puntos de Sensibilidad** |	Aumenta la Escalabilidad de la arquitectura |
+| **Trade-Off** |	Aumenta la escalabilidad del sistema al escalar de forma automática el sistema, pero disminuye el rendimiento por la cantidad de saltos que puedan presentarse por el orquestador. |
+| **Riesgos** |	Los servicios y/o dockers deberán ser desarrollados para soportar el escalamiento por la plataforma en donde estén desplegados |
+
+| **Escenario** |	El sistema debe poder satisfacer los incrementos de la demanda sin sacrificar su capacidad de respuesta, atender a 100 usuarios o 100 mil usuarios debe ser equivalente. |
+| --- | --- |
+| **Atributo de Calidad** |	Escalabilidad |
+| **Estímulo** |	Consultas (Transacciones) en el ElEdenApp de un producto u organización. |
+| **Fuente del Estímulo** |	Turista en el portal (Pagina de catálogo) |
+| **Ambiente de Operación** |	Ambiente de operación con sobre carga |
+| **Respuesta** |	El tiempo de respuesta de las transacciones(búsquedas) en la página de catálogo de producto no debe ser superior a 1,5 segundos |
+| **Medición de la Respuesta** |	Tiempo promedio del tiempo de respuesta de la transacción. |
+| **Decisiones de Arquitectura** |	El despliegue de la arquitectura deberá contar con una forma de cachear la información sin la necesidad de ir a consultar la información al servicio correspondiente. |
+| **Puntos de Sensibilidad** |	Aumento del rendimiento del tiempo de respuesta de las transacciones al catálogo de productos. |
+| **Trade-Off** | Consistencia de la información visualizada por el usuario dado el tiempo de refresco o actualización de la tecnología o método de caché |
+
+| **Escenario** |	Soporte de operación del negocio 24x7x365, se espera disponibilidad del 99.999% |
+| --- | --- |
+| **Atributo de Calidad** |	Disponibilidad |
+| **Estímulo** |	Falla en la zona en donde se encuentra desplegado el clúster de Kuberntes del proveedor de nube público |
+| **Fuente del Estímulo** |	Proveedor de nube publico |
+| **Ambiente de Operación** |	Ambiente de operación con falla |
+| **Respuest** |a	Inicio de operación del “clúster” Kubernetes en zona alterna del proveedor de nube público. |
+| **Medición de la Respuesta** |	Cluster y pods totalmente funcionando y ejecutándose en la zona alterna soportando la totalidad de la carga. |
+| **Decisiones de Arquitectura** |	La arquitectura desplegada para Toures balón se basará en una arquitectura de nube, mediante la implementación de un cluster de kubernetes con una disponibilidad del %99,99 |
+| **Puntos de Sensibilidad** |	Aumento de la disponibilidad |
+| **Trade-Off** |	Disminuye la mantenibilidad de las aplicaciones y el aumento de la complejidad de la operación. |
+| **Tiempo de Respuestas** | mayor debido a la carga total de transacciones sobre la zona que se encuentre activa. |
+| **Riesgos** |	Dependencia de la disponibilidad del proveedor de nube publica. |
+
+| **ESCENARIO** | Ante una falla del sistema por una saturación en la gestión de recursos debemos tener una recuperación parcial en menos de 4 minutos/mes de los procesos principales de reserva y compra, garantizando así una disponibilidad de .99. |
+| --- | --- |
+| **Estimulo** | Saturación de recursos de hardware o software |
+| **Fuente del estimulo** | Alta concurrencia de peticiones o transacciones a la plataforma. |
+| **Respuesta** | Si el recurso es a memoria esta se aumentará en un 50%Si el recurso es procesador este aumentará en un 50% en términos de Cores de procesamientoSi es un recurso de almacenamiento compartido este se incrementará en un 50% |
+| **Medición de la respuesta** | Generando un alto volumen de transacciones que saturen los recursos y observar que el sistema se recupere en: menos de 4 minutos – escenario Ideal, 4-5 minutos escenario aceptable,mas de 5 escenario no tolerable |
+
+| **ESCENARIO** | Ante la falla o indisponibilidad de un componente físico que afecte el proceso de reserva y compra se debe activar el sistema alterno en menos de 2 minutos. |
+| --- | --- |
+| **Estimulo** | Saturación de recursos de hardware o software |
+| **Fuente del estimulo** | Alta concurrencia de peticiones o transacciones a la plataforma. |
+| **Respuesta** | Se realizará un proceso de encendido del sistema de contingencia DR, con la finalidad de que este soporte la carga operacional de manera temporal. |
+| **Medición de la respuesta** | Generando un alto volumen de transacciones que saturen los recursos y observar que el sistema se recupere en: menos de 4 minutos - Ideal, 4-5 minutos aceptable, mas de 5 no tolerable |
+
+| **ESCENARIO** | Cuando la fuente de datos principal presente alguna falla en su componente físico debemos tener la capacidad de volcar las consultas al sistema de replicación de datos en menos de 3 minutos. |
+| --- | --- |
+| **Estimulo** | Falla eléctrica en componente físico de datos |
+| **Fuente del estimulo** | Apagado inesperado del componente físico de la fuente de datos |
+| **Respuesta** | Se realizará un re direccionamiento de las peticiones al sistema, para que las consultas se realicen en el sistema alterno de datos. |
+| **Medición de la respuesta** | Realizar un apagado controlado del componente físico de la fuente de datos y observar que las peticiones se redirijan al ambiente alterno de datos en menos de 3 minutos. |
+
+| **ESCENARIO** | Ante la presentación de un fallo en alguno de los componentes que afecten los procesos de reserva y compra se debe realizar una notificación a los administradores del sistema en menos de un minuto tomando como punto de partida el momento exacto en el que se presento el incidente |
+| --- | --- |
+| **Estimulo** | Fallo o incidente en el sistema |
+| **Fuente del estimulo** | Componente de hardware o software presentando un comportamiento anómalo |
+| **Respuesta** | Se realiza el envío de una alerta a los administradores del sistema, con el detalle técnico de la falla en menos de un minuto. |
+| **Medición de la respuesta** | Ocasionar un fallo controlado en el sistema y monitorear que los administradores involucrados con el componente en mención reciban una alerta con el detalle técnico necesario que les permita conocer el comportamiento anómalo del sistema. |
+
+| **ESCENARIO** | Ante la falla o indisponibilidad de alguno de los componentes que afecten los procesos de reservas o compras, la carga operativa de este componente debe ser asumida por otro nodo que haga parte del cluster de aplicación al que pertenece el componente afectado en menos de 30 segundos. |
+| --- | --- |
+| **Estimulo** | Fallo o incidente en el sistema |
+| **Fuente del estimulo** | Componente de hardware o software que genere indisponibilidad total de uno de los componentes del sistema indispensable para los procesos de reservas o compras |
+| **Respuesta** | Los componentes principales del sistema que soportan directamente los procesos de reserva o compras se implementan en modalidad cluster activo-activo, lo que permite que, en escenarios de fallo de alguno de los componentes, un nodo adicional del mismo puedo soportar la carga de este temporalmente. |
+| **Medición de la respuesta** | Se generará de manera controlada la indisponibilidad de alguno de los componentes del sistema de los módulos de compras o reservas y se medirá que la carga operativa de este componente sea distribuida en los demás nodos del cluster en menos de 30 segundos. |
+
+| **ESCENARIO** | Ante la saturación de recursos de hardware en términos de memoria RAM, procesamiento y almacenamiento, el sistema deberá auto escalar sus recursos con la finalidad de no afectar la operación de un usuario final |
+| --- | --- |
+| **Estimulo** | Saturación de recursos de hardware o software |
+| **Fuente del estimulo** | Alta concurrencia de peticiones o transacciones a la plataforma. |
+| **Respuesta** | El sistema realizará un auto escalamiento de sus recursos de hardware de la siguiente manera:Si la afectación es por memoria esta se aumentará en un 50%Si la afectación es por procesador este aumentará en un 50% en términos de Cores de procesamientoSi la afectación es por un recurso de almacenamiento compartido este se incrementará en un 50%|
+| **Medición de la respuesta** | Generando un alto volumen de transacciones que saturen los recursos y observar que el sistema se estabilice en: menos de 4 minutos – escenario Ideal 4-5 minutos escenario aceptable más de 5 escenario no tolerable |
+
+| **ESCENARIO** | Cuando se requiera incorporar un nuevo proveedor que utilice una tecnología hasta el momento no soportada por Toures Balon, la arquitectura de la solución no debe ser afectada en el momento de incorporarla. |
+| --- | --- |
+| **Estimulo** | Registro de un nuevo proveedor |
+| **Fuente del estimulo** | La firma de un nuevo convenio entre un proveedor y Toures Balon |
+| **Respuesta** | La arquitectura de la solución no se verá afectada con la incorporación del nuevo proveedor, luego del registro de la tecnología la plataforma de toures balón contará con una nueva tecnología soportada sin haber causado afectaciones o indisponibilidades al usuario final |
+| **Medición de la respuesta** | En el momento en el que se implemente un proveedor con una tecnología no soportada por Toures balón se debe monitorear que la solución no se vea afectada con la implementación del nuevo adaptador y que no se degrade el servicio al usuario final |
+
+| **ESCENARIO** | Cuando se requiera implementar un proveedor pesado el esfuerzo de integración no deberá ser mayor al 50% adicional del esfuerzo requerido para la implementación de un proveedor delgado. |
+| --- | --- |
+| **Estimulo** | Registro de un nuevo proveedor |
+| **Fuente del estimulo** | La firma de un nuevo convenio entre un proveedor pesado y Toures Balon |
+| **Respuesta** | Se incorpora el nuevo proveedor pesado con un esfuerzo no mayor al 50% del esfuerzo requerido para incorporar un proveedor delgado. |
+| **Medición de la respuesta**| El esfuerzo de integración se revisará de la siguiente manera: **baja:** utiliza un método de integración estándar ya implementado en el sistema. Ej: API REST o WS SOAP, FTP. **media:** utiliza varios métodos de integración estándar ya implementado en el sistema. No soporta todas las capacidades esperadas par un proveedor. No soporta todos los requerimientos del estándar del método de integración. **alta:** utiliza un método de integración estándar aún no implementado en el sistema. Ej: Apache Thirft o gRPC. **muy alta:** No utiliza ningún método de integración estándar . Debe implementarse un adaptador personalizado.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### Escenarios de atributos de calidad
 
 Debido a que son tablas complejas, preferimos que se remita a la fuenta para revisarlas.
 
 Fuente: [./content/arquitectura/source/requerimientos.xlsx - Hoja "escenarios"](./source/requerimientos.xlsx)
 
-### Restricciones
-
-De negocio:
-
-Tecnológicos: 
-
-Otros:
 
 ### Preocupaciones arquitectónicas
 
@@ -934,9 +1128,7 @@ El uso de un estilo REST para la interfaz y OpenAPI, impacta AC-4: Interoperabil
 
 ## Vistas de arquitectura: modelo 4+1
 
-Para la documentación de la arquitectura el equipo se decantó por el modelo 4+1 por ser el mas aceptado y manejado dentro de la industria, ademas de la experiencia que tienen los integrantes del equipo con este tipo de vistas.
 
-La herramienta para la creación de los diagramas es [draw.io](https://draw.io), no es la mas apropiada para realizar este tipo de diagramas, sin embargo nuestro enfoque es la practicidad ademas de ser una herramienta disponible y facil de usar para cualquier persona que deseé modificar y actualizar las vistas.
 
 ### Vista lógica
 
@@ -955,239 +1147,7 @@ Para mayor detalle puede visitar [Procesos de negocio](../procesos/procesos-nego
 TODO evaluación ATAM, Workshop interno, grabarlo y subirlo al classroom.
 
 
-## Restricciones
 
-| **CÓDIGO** | **DESCRIPCIÓN** |
-| --- | --- |
-| R001 | Cada proveedor, independientemente de su tipo utiliza diferentes mecanismos de interacción |
-| R002 | Es fundamental que el proceso no se vea viciado con ninguna decisión de tecnología |
-| R003 | Los proveedores pueden no estar disponibles o variar con el tiempo |
-| R004 | Capacidad de cambiar condiciones o reglas de negocio sin tener que re-desplegar el sistema |
-| R005 | Capacidad de respuesta de las funcionalidades del negocio para temporadas altas |
-| R006 | Soporte de canales de atención a través de la Web, dispositivos móviles y nuevas interfaces de interacción |
-| R007 | Soporte de operación del negocio 24x7x365, se espera disponibilidad del 99.999 |
-| R008 | Las peticiones de consulta de productos no deben tardar más de 1.5 segundos promedio por usuario. |
-| R009 | Ninguna petición puede tardar más de 3 segundos por usuario. |
-| R010 | El servicio de pagos debe soportar pagos por VISA, MasterCard, AMEX, Discover y PayPal. |
-
-## Requisitos
-
-| **CÓDIGO** | **DESCRIPCIÓN** |
-| --- | --- |
-| RQ001 | La implementación de los proveedores y su interacción con el proceso sea desacoplada. Esto apoyado por servicios federados que interactúen como abstracciones para el proceso. |
-| RQ002 | Integrar nuevos proveedores debe tener el menor impacto para la arquitectura y sus componentes, limitando los componentes que deben verse modificados. Preferiblemente un nuevo proveedor debería ser plug & play para tecnologías que ya son soportadas. |
-| RQ003 | Dependiendo de la negociación con el proveedor, estos pueden tener un mayor peso cuando se está realizando las búsquedas de opciones, de manera que se puedan ofrecer como los preferidos. Esos valores pueden cambiar dinámicamente dependiendo de nuevas condiciones de negocio. |
-| RQ004 | La forma en que se debe mostrar los resultados debe tener en cuenta: Peso del convenio 50% (1-10) + Calificación de los usuarios 50% (1-10). Los porcentajes pueden cambiar con el tiempo. |
-| RQ005 | La comunicación con los proveedores puede tardar algunos segundos, así que se espera que se pueda realizar una comunicación en paralelo para poder así aprovechar mejor los recursos de cómputo y también como manejar los fallos. |
-| RQ006 | Análisis de datos sobre el comportamiento de los visitantes del sitio para procesos de mejora de la experiencia de usuario y campañas comerciales |
-| RQ007 | El sitio debe soportar Full-Text Search en la búsqueda de productos. Debe soportar resultados similares para nunca mostrar 0 resultados |
-| RQ008 | El sitio debe ser responsive, este requerimiento tienen prioridad sobre cualquier desarrollo de app móvil |
-| RQ009 | El sistema debe poder satisfacer los incrementos de la demanda sin sacrificar su capacidad de respuesta, en otras palabra, atender a 100 usuario o 100 mil usuarios debería ser equivalente |
-| RQ0010 | La aplicación en general debe estar libre de al menos el Top 10 de riesgos mencionados por OWASP, en su última edición. |
-
-# VISTAS DE ARQUITECTURA
-
-
-
-### Atributos de Calidad
-
-![alt text](https://github.com/alejandro56664/aes-pica-final/blob/master/Taller4_ArquitecturaAplicaci%C3%B3n%20.NET/Diagramas/ArbolUtilidad.jpg?raw=true)
-
-### Definición de Ambientes 
-
-| **AMBIENTE** | **DESCRIPCIÓN** |
-| --- | --- |
-| Carga Normal | Entorno operando dentro de parametros de carga normal, este hace uso de los recursos computacionales esperados para satisfacer la demanda de consumo garantizando los atributos de calidad. Este ambiente se caracteriza por presentar la navegación de 4 usuarios concurrentes. |
-| Sobre Carga | Ambiente esperado en periodos de alto acceso y aumento de carga transaccional, dónde se presentan el aumento número de peticiones y concurrencia el misma. Este ambiente se caracteriza por presentar la navegación de 12 usuarios de forma concurrentes. |
-| Intermitente | Sistema el cual no presenta indisponibilidad de cobertura de acceso por errores de aplicación o de agentes externos que proveen los servicios. Este ambiente se caracteriza por la indisponibilidad de una de las zonas del proveedor de nube publico utilizado |
-
-### Escenarios de Calidad 
-
-Para la definición de los escenarios a evaluar se escogieron los atributos de calidad con importancia evaluada en ALTA y riesgo ALTO. 
-A continuación, se detallan cada uno de los escenarios:
-
-| **Escenario** | El tiempo de carga de la página principal y el catálogo no debe ser superior a 1 segundo para los usuarios que acceden al sitio web o a la app mediante una conexión móvil 4G. | 
-| --- | --- |
-| **Atributo de Calidad** | Desempeño - Actuación |
-| **Ambiente** | Operación Normal, Operación Modo emergente, Operación con Sobrecarga. |
-| **Fuente del Estimulo** | Puede ser un usuario final o administrador |
-| **Estimulo** | El usuario ingresa al home de toures balón y realiza la consulta del catálogo de productos y servicios, realizando transacciones que están centradas en la búsqueda. |
-| **Respuesta** | En condiciones de funcionamiento normal con 4 usuarios concurrentes usan el sistema, con tiempos de respuesta dentro de niveles esperados, en condiciones de sobrecarga con 10 usuarios concurrente los tiempos deben estar sobre los aceptados. |
-| **Medición Respuesta** | Se debe cargar la pantalla del home y del catálogo en un tiempo menor a 1000 milisegundos: |
-|| - 800 milisegundos – Esperado|
-|| - 1000 - 1200 milisegundos – Aceptable |
-|| - > 1200 - No tolerable |
-| **Decisiones de Arquitectura** | Para garantizar el desempeño solicitado se decide desplegar los servicios en una infraestructura en la nube, que permiten escalar a nivel horizontal máquinas y a nivel vertical capacidad de CPU, Memoria y Disco. Se plantea sobre una arquitectura de microservicios para tener definidas las responsabilidades de la carga y poder soportar grandes masas de clientes en épocas especiales como Black Friday y otros de mayor cantidad de consumos. |
-| **Puntos de Sensibilidad** | Un mal diseño e implementación en los componentes y artefactos podría incrementar los recursos usados y a la vez el auto escalado no sería el óptimo. |
-| **Trade-Off** | La imagen de la empresa con respecto a la disponibilidad y capacidad de respuesta será percibida por el usuario como optima ya que estaremos respondiendo en tiempos menores a 1 segundo, sin embargo, esto traduce es posible incremento en el OPEX |
-| **Riesgos** | - Se pueden evidenciar cobros variantes y no fijos en los servicios de tecnología que ofrece el servidor de nube. |
-|| - La empresa podrá crecer o decrecer su capacidad de tecnología acorde a las necesidades de negocio. |
-
-| **Escenario** |	En operación de alta carga se debe soportar hasta 24 usuarios concurrentes por segundo, equivalentes a 240 transacciones por segundo. |
-| --- | --- |
-| **Atributo de Calidad** |	Desempeño - Rendimiento |
-| **Ambiente** |	Operación con Sobrecarga. |
-| **Estimulo** |	El usuario ingresa al home de toures balón y realiza la consulta y/o compra de un evento del catálogo, realizando transacciones que están centradas en la búsqueda y adquisición. |
-| **Respuesta** |	En condiciones de sobrecarga con 24 usuarios concurrentes usando el sistema, se deben evidenciar tiempos de respuesta dentro de niveles aceptados
-| **Medición Respuesta** |	Se debe cargar la pantalla del home y del catálogo en un tiempo menor a 1000 milisegundos: |
-|| - 1000 milisegundos – Esperado |
-|| - 1200 - 1600 milisegundos – Aceptable |
-|| - > 1600 milisegundos  - No tolerable |
-| **Decisiones de Arquitectura** |	Para garantizar este desempeño se decide desplegar los servicios en una infraestructura en la nube, los cuales permiten realizar un escalamiento horizontal y vertical de los recursos. En los servicios o artefactos donde la persistencia de datos es alta se priorizará la gestión sobre base de datos en memoria/cache. Los servicios no deben tener una orquestación de más de 3 servicios para cumplir su funcionalidad.  Con el fin de soportar la carga de usuarios se opta por contenido almacenado en la nube y gestionado por el proveedor de nube pública. |
-| **Puntos de Sensibilidad** |	Una mala implementación en los servicios podría incrementar el uso de recursos y también el proceso de auto escalado. |
-| **Trade-Off** |	La imagen de la empresa con respecto a la disponibilidad y capacidad de respuesta será percibida por el usuario como optima ya que estaremos respondiendo en tiempos menores a 1 segundo, sin embargo, esto traduce es posible incremento en el OPEX |
-| **Riesgos** | - La empresa podrá crecer o decrecer su capacidad de tecnología acorde a las necesidades de negocio|
-|| - Se pueden evidenciar cobros variantes y no fijos en los servicios de tecnología que ofrece el servidor de nube|
-|| - Ante la caída de alguno de los recursos se podrán presentar latencias mientras se realiza el aprovisionamiento de los recursos nuevamente. |
-
-| **Escenario** |	El sitio debe soportar Full-Text Search en la búsqueda de productos. Debe soportar resultados similares para nunca mostrar 0 resultados. |
-| --- | --- |
-| **Atributo de Calidad** |	Usabilidad – Capacidad de descubrimiento |
-| **Ambiente** |	Operación Normal, Operación Modo emergente, Operación con Sobrecarga. |
-| **Fuente del Estimulo** |	Puede ser un usuario final o administrador |
-| **Estimulo** |	El usuario ingresa al home de toures balón y realiza la consulta del catálogo de productos y servicios, realizando transacciones que están centradas en la búsqueda. |
-| **Respuesta** |	El sistema debe realizar búsqueda por palabras en el almacenamiento por el índice de texto. |
-| **Medición Respuesta** |	Se debe retornar los resultados de dos formas posibles: Retornar todas las coincidencias encontradas del texto ingresado |
-|| Retornar un mensaje indicando resultados similares según el top de busquedas, no se debe retornar nunca el mensaje 0 resultados encontrados |
-| **Decisiones de Arquitectura** |	Para poder satisfacer esta necesidad, se decide realizar la implementación del índice de texto en la base de datos, lo que permite encontrar rápidamente todas las instancias de un término (palabra) en una tabla sin tener que escanear filas y sin tener que saber en qué columna se almacena un término. En caso de no encontrar ningún resultado se devolverán los resultados de las búsquedas mas utilizadas en la ultima hora. |
-| **Puntos de Sensibilidad** |	Mala implementación del índice de texto, lo que afecta el rendimiento y resultados de las búsquedas. |
-| **Trade-Off** |	Brindar al usuario final una buena experiencia en el sitio, ya que no se muestran mensajes negativos o que frustren sus necesidades de búsqueda. |
-| **Riesgos** | - Bajo rendimiento en las búsquedas de la base de datos.|
-|| - Demora en las respuestas al usuario final con respecto a las búsquedas que realice. |
-
-| **Escenario** |	Un usuario no autorizado intenta acceder al sistema de compras en un entorno operativo normal. Los procesos de seguridad en el sistema deben garantizar que los usuarios no autenticados no tengan acceso. El sistema debe mantener las contraseñas y la información confidencial relacionada con el usuario de forma adecuada.
-| --- | --- |
-| **Atributo de Calidad** |	Seguridad – Autenticación |
-| **Ambiente** |	Operación Normal, Operación Modo emergente, Operación con Sobrecarga. |
-| **Fuente del Estimulo** |	Usuario final |
-| **Estimulo** |	El usuario ingresa al home de toures balón, intenta acceder por medio de url a la sección de compra de paquetes o productos sin registrarse en el sistema. |
-| **Respuesta	El sistema** | realiza la validación de usuario en dos frentes, frontend y backend por medio de token de autenticación. |
-| **Medición** | Respuesta	Retorna un mensaje de error en el cual se informe que no se tiene acceso al recurso requerido |
-| **Decisiones de Arquitectura** |	Para cubrir este requerimiento de seguridad, se realizará la implementación del patrón API Gateway el cual permite la configuración para evitar inyecciones de Código y control de acceso a recursos por medio de autenticación de usuarios. |
-| **Puntos de Sensibilidad** |	Error de configuración en los recursos que permitan el acceso no autorizado |
-| **Trade-Off** |	Brindar al usuario final una alta garantía de seguridad con respecto al resguardo de su información privada. |
-| **Riesgos** | Errores en la configuración de seguridad de los recursos que la requirieren |
-
-| **Escenario** |	El sistema debe tener la capacidad de cambiar condiciones o reglas de negocio sin tener que re-desplegar el sistema y sin generar indisponibilidades. |
-| --- | --- |
-| **Atributo de Calidad** |	Modificabilidad |
-| **Estímulo** |	Despliegue de las nuevas reglas de negocio |
-| **Fuente del Estímulo** |	Usuario administrativo realiza cambio de regla de negocio |
-| **Ambiente de Operación** |	Ambiente de operación Normal |
-| **Respuesta** |	Las nuevas transacciones (órdenes de pago) deberán ser evaluadas con el valor de las nuevas reglas de negocio |
-| **Medición de la Respuesta** |	Las nuevas transacciones deberán ser registradas en la base de datos de reglas de negocio con el nuevo código de la regla de negocio que la evaluó |
-| **Decisiones de Arquitectura** |	En la implementación de la arquitectura se desplegará un aplicativo que permita la configuración y despliegue de reglas de negocio sin la necesidad de redesplegar todo el sistema y que actualizará los cambios de forma automática sin ser retroactiva. |
-| **Puntos de Sensibilidad** |	El número concurrente de consulta afecta el desempeño del motor de reglas. |
-| **Trade-Off** |	El rendimiento del motor de reglas de negocio podrá afectar el tiempo de respuesta del sistema dada una contención de recursos. |
-| **Riesgos** |	Rendimiento del sistema y tiempo de respuesta en las transacciones de compra |
-
-| **Escenario** |	El sistema debe tener la capacidad de agregar nuevos proveedores/convenios/alianzas sin restricciones de características y sin que esto sea traumático. |
-| --- | --- |
-| **Atributo de Calidad** |	Modificabilidad |
-| **Estímulo** |	Despliegue del nuevo proveedor en la interfaz web administrativa del sitio Web |
-| **Fuente del Estímulo** |	Usuario administrativo agrega un nuevo proveedor de transporte/hotel/espectáculo |
-| **Ambiente de Operación** |	Ambiente de operación Normal |
-| **Respuesta** |	La página de resultado de búsquedas deberá mostrar las opciones y tarifas de espectáculos/transporte/ hospedaje del proveedor ingresado. |
-| **Medición de la Respuesta** |	Integración con el nuevo proveedor. |
-| **Decisiones de Arquitectura** |	Para garantizar la facilidad de ingresar un nuevo proveedor/convenio/alianza se definen un servicio basado en el patrón Intermediate Routing para conectarse a los diferentes servicios de los proveedores sin importar el tipo de tecnología de conexión. |
-| **Puntos de Sensibilidad** |	Aumento de la mantenibilidad de la arquitectura de Toures balón por ser un conjunto de servicios determinados los que tienen la responsabilidad de realizar la integración con los proveedores. |
-| **Trade-Off** |	Disminución o dependencia de la interfaz de comunicación y de datos del nuevo proveedor agregado. |
-| **Riesgos** |	Implementación y complejidad con la adicción de nuevo servicios asociados con auditoria y seguridad. |
-
-| **Escenario** |	El sistema debe ser capaz de crecer y decrecer dinámicamente según la demanda. Este caso en especial se ve reflejado en las fechas como Cyber-Mondays, Black-Fridays y otros en donde la demanda por los servicios puede crecer hasta 250% sobre la operación normal. |
-| --- | --- |
-| **Atributo de Calidad** |	Escalabilidad |
-| **Estímulo** |	Búsquedas(Transacciones) en el portal Web de Toures balón de un espectáculo o paquete turístico. |
-| **Fuente del Estímulo** |	Usuario – Cliente en el portal Web(Pagina de catálogo) |
-| **Ambiente de Operación** |	Ambiente de operación con sobre carga |
-| **Respuesta** |	El número de instancias de pods/Docker deberá aumentar según política de escalado horizontal(consumo de CPU - memoria). |
-| **Medición de la respuesta** |	Número de pods/Docker creados dinámicamente durante el ambiente de sobrecarga |
-| **Decisiones de Arquitectura** |	La arquitectura para implementar de Toures balón deberá ser implementada en una tecnología que permite el escalamiento de forma automática (Orquestador de Docker como Kuberntes, RANCHOS o GKC) |
-| **Puntos de Sensibilidad** |	Aumenta la Escalabilidad de la arquitectura |
-| **Trade-Off** |	Aumenta la escalabilidad del sistema al escalar de forma automática el sistema, pero disminuye el rendimiento por la cantidad de saltos que puedan presentarse por el orquestador. |
-| **Riesgos** |	Los servicios y/o dockers deberán ser desarrollados para soportar el escalamiento por la plataforma en donde estén desplegados |
-
-| **Escenario** |	El sistema debe poder satisfacer los incrementos de la demanda sin sacrificar su capacidad de respuesta, atender a 100 usuarios o 100 mil usuarios debe ser equivalente. |
-| --- | --- |
-| **Atributo de Calidad** |	Escalabilidad |
-| **Estímulo** |	Búsquedas(Transacciones) en el portal Web de Toures balón de un espectáculo o paquete turístico. |
-| **Fuente del Estímulo** |	Usuario – Cliente en el portal Web(Pagina de catálogo) |
-| **Ambiente de Operación** |	Ambiente de operación con sobre carga |
-| **Respuesta** |	El tiempo de respuesta de las transacciones(búsquedas) en la página de catálogo de producto no debe ser superior a 1,5 segundos |
-| **Medición de la Respuesta** |	Tiempo promedio del tiempo de respuesta de la transacción. |
-| **Decisiones de Arquitectura** |	El despliegue de la arquitectura de Toures balón deberá contar con una forma de cachear la información sin la necesidad de ir a consultar la información al servicio correspondiente. |
-| **Puntos de Sensibilidad** |	Aumento del rendimiento del tiempo de respuesta de las transacciones al catálogo de productos. |
-| **Trade-Off** | Consistencia de la información visualizada por el usuario dado el tiempo de refresco o actualización de la tecnología o método de caché |
-
-| **Escenario** |	Soporte de operación del negocio 24x7x365, se espera disponibilidad del 99.999% |
-| --- | --- |
-| **Atributo de Calidad** |	Disponibilidad |
-| **Estímulo** |	Falla en la zona en donde se encuentra desplegado el clúster de Kuberntes del proveedor de nube público |
-| **Fuente del Estímulo** |	Proveedor de nube publico |
-| **Ambiente de Operación** |	Ambiente de operación con falla |
-| **Respuest** |a	Inicio de operación del “clúster” Kubernetes en zona alterna del proveedor de nube público. |
-| **Medición de la Respuesta** |	Cluster y pods totalmente funcionando y ejecutándose en la zona alterna soportando la totalidad de la carga. |
-| **Decisiones de Arquitectura** |	La arquitectura desplegada para Toures balón se basará en una arquitectura de nube, mediante la implementación de un cluster de kubernetes con una disponibilidad del %99,99 |
-| **Puntos de Sensibilidad** |	Aumento de la disponibilidad |
-| **Trade-Off** |	Disminuye la mantenibilidad de las aplicaciones y el aumento de la complejidad de la operación. |
-| **Tiempo de Respuestas** | mayor debido a la carga total de transacciones sobre la zona que se encuentre activa. |
-| **Riesgos** |	Dependencia de la disponibilidad del proveedor de nube publica. |
-
-| **ESCENARIO** | Ante una falla del sistema por una saturación en la gestión de recursos debemos tener una recuperación parcial en menos de 4 minutos/mes de los procesos principales de reserva y compra, garantizando así una disponibilidad de .99. |
-| --- | --- |
-| **Estimulo** | Saturación de recursos de hardware o software |
-| **Fuente del estimulo** | Alta concurrencia de peticiones o transacciones a la plataforma. |
-| **Respuesta** | Si el recurso es a memoria esta se aumentará en un 50%Si el recurso es procesador este aumentará en un 50% en términos de Cores de procesamientoSi es un recurso de almacenamiento compartido este se incrementará en un 50% |
-| **Medición de la respuesta** | Generando un alto volumen de transacciones que saturen los recursos y observar que el sistema se recupere en: menos de 4 minutos – escenario Ideal, 4-5 minutos escenario aceptable,mas de 5 escenario no tolerable |
-
-| **ESCENARIO** | Ante la falla o indisponibilidad de un componente físico que afecte el proceso de reserva y compra se debe activar el sistema alterno en menos de 2 minutos. |
-| --- | --- |
-| **Estimulo** | Saturación de recursos de hardware o software |
-| **Fuente del estimulo** | Alta concurrencia de peticiones o transacciones a la plataforma. |
-| **Respuesta** | Se realizará un proceso de encendido del sistema de contingencia DR, con la finalidad de que este soporte la carga operacional de manera temporal. |
-| **Medición de la respuesta** | Generando un alto volumen de transacciones que saturen los recursos y observar que el sistema se recupere en: menos de 4 minutos - Ideal, 4-5 minutos aceptable, mas de 5 no tolerable |
-
-| **ESCENARIO** | Cuando la fuente de datos principal presente alguna falla en su componente físico debemos tener la capacidad de volcar las consultas al sistema de replicación de datos en menos de 3 minutos. |
-| --- | --- |
-| **Estimulo** | Falla eléctrica en componente físico de datos |
-| **Fuente del estimulo** | Apagado inesperado del componente físico de la fuente de datos |
-| **Respuesta** | Se realizará un re direccionamiento de las peticiones al sistema, para que las consultas se realicen en el sistema alterno de datos. |
-| **Medición de la respuesta** | Realizar un apagado controlado del componente físico de la fuente de datos y observar que las peticiones se redirijan al ambiente alterno de datos en menos de 3 minutos. |
-
-| **ESCENARIO** | Ante la presentación de un fallo en alguno de los componentes que afecten los procesos de reserva y compra se debe realizar una notificación a los administradores del sistema en menos de un minuto tomando como punto de partida el momento exacto en el que se presento el incidente |
-| --- | --- |
-| **Estimulo** | Fallo o incidente en el sistema |
-| **Fuente del estimulo** | Componente de hardware o software presentando un comportamiento anómalo |
-| **Respuesta** | Se realiza el envío de una alerta a los administradores del sistema, con el detalle técnico de la falla en menos de un minuto. |
-| **Medición de la respuesta** | Ocasionar un fallo controlado en el sistema y monitorear que los administradores involucrados con el componente en mención reciban una alerta con el detalle técnico necesario que les permita conocer el comportamiento anómalo del sistema. |
-
-| **ESCENARIO** | Ante la falla o indisponibilidad de alguno de los componentes que afecten los procesos de reservas o compras, la carga operativa de este componente debe ser asumida por otro nodo que haga parte del cluster de aplicación al que pertenece el componente afectado en menos de 30 segundos. |
-| --- | --- |
-| **Estimulo** | Fallo o incidente en el sistema |
-| **Fuente del estimulo** | Componente de hardware o software que genere indisponibilidad total de uno de los componentes del sistema indispensable para los procesos de reservas o compras |
-| **Respuesta** | Los componentes principales del sistema que soportan directamente los procesos de reserva o compras se implementan en modalidad cluster activo-activo, lo que permite que, en escenarios de fallo de alguno de los componentes, un nodo adicional del mismo puedo soportar la carga de este temporalmente. |
-| **Medición de la respuesta** | Se generará de manera controlada la indisponibilidad de alguno de los componentes del sistema de los módulos de compras o reservas y se medirá que la carga operativa de este componente sea distribuida en los demás nodos del cluster en menos de 30 segundos. |
-
-| **ESCENARIO** | Ante la saturación de recursos de hardware en términos de memoria RAM, procesamiento y almacenamiento, el sistema deberá auto escalar sus recursos con la finalidad de no afectar la operación de un usuario final |
-| --- | --- |
-| **Estimulo** | Saturación de recursos de hardware o software |
-| **Fuente del estimulo** | Alta concurrencia de peticiones o transacciones a la plataforma. |
-| **Respuesta** | El sistema realizará un auto escalamiento de sus recursos de hardware de la siguiente manera:Si la afectación es por memoria esta se aumentará en un 50%Si la afectación es por procesador este aumentará en un 50% en términos de Cores de procesamientoSi la afectación es por un recurso de almacenamiento compartido este se incrementará en un 50%|
-| **Medición de la respuesta** | Generando un alto volumen de transacciones que saturen los recursos y observar que el sistema se estabilice en: menos de 4 minutos – escenario Ideal 4-5 minutos escenario aceptable más de 5 escenario no tolerable |
-
-| **ESCENARIO** | Cuando se requiera incorporar un nuevo proveedor que utilice una tecnología hasta el momento no soportada por Toures Balon, la arquitectura de la solución no debe ser afectada en el momento de incorporarla. |
-| --- | --- |
-| **Estimulo** | Registro de un nuevo proveedor |
-| **Fuente del estimulo** | La firma de un nuevo convenio entre un proveedor y Toures Balon |
-| **Respuesta** | La arquitectura de la solución no se verá afectada con la incorporación del nuevo proveedor, luego del registro de la tecnología la plataforma de toures balón contará con una nueva tecnología soportada sin haber causado afectaciones o indisponibilidades al usuario final |
-| **Medición de la respuesta** | En el momento en el que se implemente un proveedor con una tecnología no soportada por Toures balón se debe monitorear que la solución no se vea afectada con la implementación del nuevo adaptador y que no se degrade el servicio al usuario final |
-
-| **ESCENARIO** | Cuando se requiera implementar un proveedor pesado el esfuerzo de integración no deberá ser mayor al 50% adicional del esfuerzo requerido para la implementación de un proveedor delgado. |
-| --- | --- |
-| **Estimulo** | Registro de un nuevo proveedor |
-| **Fuente del estimulo** | La firma de un nuevo convenio entre un proveedor pesado y Toures Balon |
-| **Respuesta** | Se incorpora el nuevo proveedor pesado con un esfuerzo no mayor al 50% del esfuerzo requerido para incorporar un proveedor delgado. |
-| **Medición de la respuesta**| El esfuerzo de integración se revisará de la siguiente manera: **baja:** utiliza un método de integración estándar ya implementado en el sistema. Ej: API REST o WS SOAP, FTP. **media:** utiliza varios métodos de integración estándar ya implementado en el sistema. No soporta todas las capacidades esperadas par un proveedor. No soporta todos los requerimientos del estándar del método de integración. **alta:** utiliza un método de integración estándar aún no implementado en el sistema. Ej: Apache Thirft o gRPC. **muy alta:** No utiliza ningún método de integración estándar . Debe implementarse un adaptador personalizado.
 
 ## - Vista de Proceso
 El proceso de reserva de la empresa Toures Balón se ha modificado en su mayoría, esto teniendo en cuenta las necesidades del negocio y la necesidad de automatizar el proceso en cuanto pueda ser posible. Este nuevo proceso de habilita el uso de un motor de reglas de negocio permitiendo dinamizar actividades como la validación del monto de una compra sin la necesidad de redesplegar el proceso.
