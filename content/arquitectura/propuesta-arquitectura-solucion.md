@@ -435,11 +435,11 @@ Se deben asignar responsabilidades de administración de datos funcionales. Se d
       </tr>
       <tr>
          <td align="center">Razón Fundamental</td>
-         <td colspan=2>Cuanto más un usuario tiene que entender la tecnología subyacente, menos productivo es ese usuario. La facilidad de uso es un incentivo positivo para el uso de aplicaciones. Alienta a los usuarios a trabajar dentro del entorno de información integrado en lugar de desarrollar sistemas aislados para realizar la tarea fuera del entorno de información integrado de Toures Balón. La mayor parte del conocimiento requerido para operar un sistema será similar a otros. La capacitación se mantiene al mínimo, y el riesgo de usar un sistema de manera inadecuada es bajo. El uso de una aplicación debe ser tan intuitivo como el usar un celular diferente.</td>
+         <td colspan=2>Cuanto más un usuario tiene que entender la tecnología subyacente, menos productivo es ese usuario. La facilidad de uso es un incentivo positivo para el uso de aplicaciones. Alienta a los usuarios a trabajar dentro del entorno de información integrado en lugar de desarrollar sistemas aislados para realizar la tarea fuera del entorno de información integrado de ElEdenApp. La mayor parte del conocimiento requerido para operar un sistema será similar a otros. La capacitación se mantiene al mínimo, y el riesgo de usar un sistema de manera inadecuada es bajo. El uso de una aplicación debe ser tan intuitivo como el usar un celular diferente.</td>
       </tr>
       <tr>
          <td align="center">Implicaciones</td>
-         <td colspan=2>Se requerirá que las aplicaciones tengan un "aspecto y sensación" comunes y que cumplan con los requisitos ergonómicos; por lo tanto, debe diseñarse el estándar común de apariencia y sensación según las definiciones de la dirección de Mercadeo y el área de Experiencia de Usuario de Toures Balón y deben desarrollarse criterios de prueba de usabilidad.</td>
+         <td colspan=2>Se requerirá que las aplicaciones tengan un "aspecto y sensación" comunes y que cumplan con los requisitos ergonómicos; por lo tanto, debe diseñarse el estándar común de apariencia y sensación según las definiciones de la dirección de Mercadeo y el área de Experiencia del turista de La tebaida y deben desarrollarse criterios de prueba de usabilidad.</td>
       </tr>
       <tr>
          <td></td>
@@ -865,7 +865,7 @@ A continuación, se detallan cada uno de los escenarios:
 | **Atributo de Calidad** |	Seguridad – Autenticación |
 | **Ambiente** |	Operación Normal, Operación Modo emergente, Operación con Sobrecarga. |
 | **Fuente del Estimulo** |	Usuario final |
-| **Estimulo** |	El usuario ingresa al home de toures balón, intenta acceder por medio de url a la sección de administración de organizaciones o productos sin registrarse en el sistema. |
+| **Estimulo** |	El usuario ingresa al home de ElEdenApp, intenta acceder por medio de url a la sección de administración de organizaciones o productos sin registrarse en el sistema. |
 | **Respuesta	El sistema** | realiza la validación de usuario en dos frentes, frontend y backend por medio de token de autenticación. |
 | **Medición** | Respuesta	Retorna un mensaje de error en el cual se informe que no se tiene acceso al recurso requerido |
 | **Decisiones de Arquitectura** |	Para cubrir este requerimiento de seguridad, se realizará la implementación del patrón API Gateway el cual permite la configuración para evitar inyecciones de Código y control de acceso a recursos por medio de autenticación de usuarios. |
@@ -928,24 +928,24 @@ A continuación, se detallan cada uno de los escenarios:
 | --- | --- |
 | **Atributo de Calidad** |	Disponibilidad |
 | **Estímulo** |	Falla en la zona en donde se encuentra desplegado el clúster de Kuberntes del proveedor de nube público |
-| **Fuente del Estímulo** |	Proveedor de nube publico |
+| **Fuente del Estímulo** |	Proveedor de nube público |
 | **Ambiente de Operación** |	Ambiente de operación con falla |
 | **Respuest** |a	Inicio de operación del “clúster” Kubernetes en zona alterna del proveedor de nube público. |
 | **Medición de la Respuesta** |	Cluster y pods totalmente funcionando y ejecutándose en la zona alterna soportando la totalidad de la carga. |
-| **Decisiones de Arquitectura** |	La arquitectura desplegada para Toures balón se basará en una arquitectura de nube, mediante la implementación de un cluster de kubernetes con una disponibilidad del %99,99 |
+| **Decisiones de Arquitectura** |	La arquitectura desplegada para ElEdenApp se basará en una arquitectura de nube, mediante la implementación de un cluster de kubernetes con una disponibilidad del %99,99 |
 | **Puntos de Sensibilidad** |	Aumento de la disponibilidad |
 | **Trade-Off** |	Disminuye la mantenibilidad de las aplicaciones y el aumento de la complejidad de la operación. |
 | **Tiempo de Respuestas** | mayor debido a la carga total de transacciones sobre la zona que se encuentre activa. |
 | **Riesgos** |	Dependencia de la disponibilidad del proveedor de nube publica. |
 
-| **ESCENARIO** | Ante una falla del sistema por una saturación en la gestión de recursos debemos tener una recuperación parcial en menos de 4 minutos/mes de los procesos principales de reserva y compra, garantizando así una disponibilidad de .99. |
+| **ESCENARIO** | Ante una falla del sistema por una saturación en la gestión de recursos debemos tener una recuperación parcial en menos de 4 minutos/mes de los procesos principales de consulta y registro, garantizando así una disponibilidad de .99. |
 | --- | --- |
 | **Estimulo** | Saturación de recursos de hardware o software |
 | **Fuente del estimulo** | Alta concurrencia de peticiones o transacciones a la plataforma. |
-| **Respuesta** | Si el recurso es a memoria esta se aumentará en un 50%Si el recurso es procesador este aumentará en un 50% en términos de Cores de procesamientoSi es un recurso de almacenamiento compartido este se incrementará en un 50% |
+| **Respuesta** | Si el recurso es a memoria esta se aumentará en un 50%Si el recurso es procesador este aumentará en un 50% en términos de Cores de procesamiento. Si es un recurso de almacenamiento compartido este se incrementará en un 50% |
 | **Medición de la respuesta** | Generando un alto volumen de transacciones que saturen los recursos y observar que el sistema se recupere en: menos de 4 minutos – escenario Ideal, 4-5 minutos escenario aceptable,mas de 5 escenario no tolerable |
 
-| **ESCENARIO** | Ante la falla o indisponibilidad de un componente físico que afecte el proceso de reserva y compra se debe activar el sistema alterno en menos de 2 minutos. |
+| **ESCENARIO** | Ante la falla o indisponibilidad de un componente físico que afecte el proceso de consulta o registro de organizacion o producto se debe activar el sistema alterno en menos de 2 minutos. |
 | --- | --- |
 | **Estimulo** | Saturación de recursos de hardware o software |
 | **Fuente del estimulo** | Alta concurrencia de peticiones o transacciones a la plataforma. |
@@ -966,33 +966,12 @@ A continuación, se detallan cada uno de los escenarios:
 | **Respuesta** | Se realiza el envío de una alerta a los administradores del sistema, con el detalle técnico de la falla en menos de un minuto. |
 | **Medición de la respuesta** | Ocasionar un fallo controlado en el sistema y monitorear que los administradores involucrados con el componente en mención reciban una alerta con el detalle técnico necesario que les permita conocer el comportamiento anómalo del sistema. |
 
-| **ESCENARIO** | Ante la falla o indisponibilidad de alguno de los componentes que afecten los procesos de reservas o compras, la carga operativa de este componente debe ser asumida por otro nodo que haga parte del cluster de aplicación al que pertenece el componente afectado en menos de 30 segundos. |
-| --- | --- |
-| **Estimulo** | Fallo o incidente en el sistema |
-| **Fuente del estimulo** | Componente de hardware o software que genere indisponibilidad total de uno de los componentes del sistema indispensable para los procesos de reservas o compras |
-| **Respuesta** | Los componentes principales del sistema que soportan directamente los procesos de reserva o compras se implementan en modalidad cluster activo-activo, lo que permite que, en escenarios de fallo de alguno de los componentes, un nodo adicional del mismo puedo soportar la carga de este temporalmente. |
-| **Medición de la respuesta** | Se generará de manera controlada la indisponibilidad de alguno de los componentes del sistema de los módulos de compras o reservas y se medirá que la carga operativa de este componente sea distribuida en los demás nodos del cluster en menos de 30 segundos. |
-
-| **ESCENARIO** | Ante la saturación de recursos de hardware en términos de memoria RAM, procesamiento y almacenamiento, el sistema deberá auto escalar sus recursos con la finalidad de no afectar la operación de un usuario final |
+| **ESCENARIO** | Ante la saturación de recursos de hardware en términos de memoria RAM, procesamiento y almacenamiento, el sistema deberá auto escalar sus recursos con la finalidad de no afectar la operación de un turista |
 | --- | --- |
 | **Estimulo** | Saturación de recursos de hardware o software |
 | **Fuente del estimulo** | Alta concurrencia de peticiones o transacciones a la plataforma. |
-| **Respuesta** | El sistema realizará un auto escalamiento de sus recursos de hardware de la siguiente manera:Si la afectación es por memoria esta se aumentará en un 50%Si la afectación es por procesador este aumentará en un 50% en términos de Cores de procesamientoSi la afectación es por un recurso de almacenamiento compartido este se incrementará en un 50%|
+| **Respuesta** | El sistema realizará un auto escalamiento de sus recursos de hardware de la siguiente manera:Si la afectación es por memoria esta se aumentará en un 50%  Si la afectación es por procesador este aumentará en un 50% en términos de Cores de procesamientoSi la afectación es por un recurso de almacenamiento compartido este se incrementará en un 50%|
 | **Medición de la respuesta** | Generando un alto volumen de transacciones que saturen los recursos y observar que el sistema se estabilice en: menos de 4 minutos – escenario Ideal 4-5 minutos escenario aceptable más de 5 escenario no tolerable |
-
-| **ESCENARIO** | Cuando se requiera incorporar un nuevo proveedor que utilice una tecnología hasta el momento no soportada por Toures Balon, la arquitectura de la solución no debe ser afectada en el momento de incorporarla. |
-| --- | --- |
-| **Estimulo** | Registro de un nuevo proveedor |
-| **Fuente del estimulo** | La firma de un nuevo convenio entre un proveedor y Toures Balon |
-| **Respuesta** | La arquitectura de la solución no se verá afectada con la incorporación del nuevo proveedor, luego del registro de la tecnología la plataforma de toures balón contará con una nueva tecnología soportada sin haber causado afectaciones o indisponibilidades al usuario final |
-| **Medición de la respuesta** | En el momento en el que se implemente un proveedor con una tecnología no soportada por Toures balón se debe monitorear que la solución no se vea afectada con la implementación del nuevo adaptador y que no se degrade el servicio al usuario final |
-
-| **ESCENARIO** | Cuando se requiera implementar un proveedor pesado el esfuerzo de integración no deberá ser mayor al 50% adicional del esfuerzo requerido para la implementación de un proveedor delgado. |
-| --- | --- |
-| **Estimulo** | Registro de un nuevo proveedor |
-| **Fuente del estimulo** | La firma de un nuevo convenio entre un proveedor pesado y Toures Balon |
-| **Respuesta** | Se incorpora el nuevo proveedor pesado con un esfuerzo no mayor al 50% del esfuerzo requerido para incorporar un proveedor delgado. |
-| **Medición de la respuesta**| El esfuerzo de integración se revisará de la siguiente manera: **baja:** utiliza un método de integración estándar ya implementado en el sistema. Ej: API REST o WS SOAP, FTP. **media:** utiliza varios métodos de integración estándar ya implementado en el sistema. No soporta todas las capacidades esperadas par un proveedor. No soporta todos los requerimientos del estándar del método de integración. **alta:** utiliza un método de integración estándar aún no implementado en el sistema. Ej: Apache Thirft o gRPC. **muy alta:** No utiliza ningún método de integración estándar . Debe implementarse un adaptador personalizado.
 
 
 
