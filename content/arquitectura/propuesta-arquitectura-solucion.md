@@ -973,19 +973,26 @@ A continuación, se detallan cada uno de los escenarios:
 | **Respuesta** | El sistema realizará un auto escalamiento de sus recursos de hardware de la siguiente manera:Si la afectación es por memoria esta se aumentará en un 50%  Si la afectación es por procesador este aumentará en un 50% en términos de Cores de procesamientoSi la afectación es por un recurso de almacenamiento compartido este se incrementará en un 50%|
 | **Medición de la respuesta** | Generando un alto volumen de transacciones que saturen los recursos y observar que el sistema se estabilice en: menos de 4 minutos – escenario Ideal 4-5 minutos escenario aceptable más de 5 escenario no tolerable |
 
+### Vista de Negocio
 
+El modelo de Arquitectura de Negocio detalla la interrelación de la entidad Turista con las entidades de negocio de organizacion y sus productos para su consulta y como las organizaciones y el administrador de la plataforma necesitar interactuar de forma coordinada para realizar la gestion de estos recursos.
 
-### Vista Lógica
+![alt text](../../diagrams/EE_DiagramaNegocio_v1.0.jpg?raw=true)
 
 ### Vista de Procesos
 
 El proceso de reserva de la empresa Toures Balón se ha modificado en su mayoría, esto teniendo en cuenta las necesidades del negocio y la necesidad de automatizar el proceso en cuanto pueda ser posible. Este nuevo proceso de habilita el uso de un motor de reglas de negocio permitiendo dinamizar actividades como la validación del monto de una compra sin la necesidad de redesplegar el proceso.
 
+### Vista Logica
+
+La modelo de la arquitectura de aplicación propuesto detalla las aplicaciones, las funciones de aplicación y los servicios de aplicación los cuales soportan los diferentes procesos de negocio descritos en el modelo de arquitectura objetivo del dominio de negocio. Las aplicaciones descritas en el diagrama están compuestas por un conjunto de funciones de aplicación las cuales serán implementadas utilizando el patrón de arquitectura de microservicios.
+
 ### Vista Física
+
+El modelo de la arquitectura de tecnología describe cada uno de los componentes de hardware y software que están involucrados en los procesos de negocio en Toures Balón. Tal como se ha descrito en las anteriores fases, actualmente este proceso de negocio cuenta con una replicación de los procesos, sistemas y componentes para cada uno de los canales de atención y se centraliza únicamente en la fuente de información de los data center que involucran este proceso de negocio. Esta arquitectura ha sido diseñada desde su concepción para ser implementada sobre la nube.
 
 ### Vista de Desarrollo
 
-## Evaluación con ATAM
 
 ### Desiciones de Arquitectura
 La solución de arquitectura propuesta para “Toures Balón” se basa en un estilo arquitectural de microservicios, permitiendo la encapsulación de responsabilidades definidas y un desacoplamiento e independencia de los servicios. Lo cual posibilita la adición o modificación de características a la arquitectura de forma ágil y sin generar indisponibilidades en la prestación de servicio o en el funcionamiento del negocio. A continuación, se detallan los patrones de Arquitectura a ser utilizados:
