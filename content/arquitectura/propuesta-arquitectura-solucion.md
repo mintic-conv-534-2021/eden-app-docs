@@ -1026,40 +1026,24 @@ La solución de arquitectura propuesta para “ElEdenApp” se basa en un estilo
 
 Para asegurar la disponibilidad y el cumplimiento de los requerimientos no funcionales definidos por el negocio e implementados en la arquitectura, se han definido los siguiente elementos de visualizacion y monitoreo:
 
-![alt text](https://github.com/alejandro56664/aes-pica-final/blob/master/Taller4_ArquitecturaAplicaci%C3%B3n%20.NET/Diagramas/DTB_Monitoreo.jpg?raw=true)
-
 1.	Uso de Java Heap-Memory (MB)
 2.	Carga CPU – JVM (%)
 3.	Velocidad de peticiones de Entrada y salida (Bps)
-4.  Comportamiento de red (peticiones x minuto)
-5.	Gestión de solicitudes Kafka (Mensajes x minuto)
-6.	Peticiones proveedores SOAP (Cantidad de mensajes topic)
-7.	Peticiones proveedores REST (Cantidad de mensajes topic)
-8.	Peticiones totales Proveedores (Cantidad de mensajes topic)
-9.	Cantidad de reservas realizadas (Cantidad de mensajes topic)
-10. Gestión de conexiones (Conexiones x segundo)
+4. Comportamiento de red (peticiones x minuto)
+5. Gestión de conexiones (Conexiones x segundo)
 
-- **Tasa de conversión _= (# de ingresos al portal / # de reservas realizadas) * 100_**
+- **Tasa de conversión _= (# de ingresos al portal / # de visitas realizadas) * 100_**
 
-La tasa de conversión es la cantidad de clientes que completan una venta después de visitar el sitio de Toures Balón y ver alguno de los productos que ofrecemos ya sean viajes, hoteles o eventos. La tasa de conversión está estrechamente relacionada con las métricas generales de ingresos. Esto representa las ventas reales basadas en los clientes que ven los productos. Este KPI se puede comparar con otras métricas diseñadas para mejorar las conversiones. Compárelo con las visitas a la página, los valores promedio de los pedidos y las fuentes de tráfico para obtener información más detallada sobre el comportamiento de sus usuarios .
-
-![alt text](https://github.com/alejandro56664/aes-pica-final/blob/master/Taller4_ArquitecturaAplicaci%C3%B3n%20.NET/Diagramas/DTB_Metricas.jpg?raw=true)
-
-- **Tasa de abandono del carrito _= (# de reservas pagadas) / (# de reservas creadas) * 100_**
-
-La tasa de abandono del carrito es el porcentaje de clientes que agregan un artículo al carrito y luego abandonan la compra. La cantidad de artículos agregados al carrito, el valor de los artículos agregados al carrito y el tiempo de compra también son importantes.
+La tasa de conversión es la cantidad de clientes que completan una visita después de consultar el sitio de ElEdenApp y ver alguno de los productos que ofrecemos ya sean restaurante, hoteles o eventos. La tasa de conversión está estrechamente relacionada con las métricas generales de ingresos. Esto representa las ventas reales basadas en los clientes que ven los productos. Este KPI se puede comparar con otras métricas diseñadas para mejorar las conversiones. Compárelo con las visitas a la página, los valores promedio de los pedidos y las fuentes de tráfico para obtener información más detallada sobre el comportamiento de sus usuarios .
 
 - **Porcentaje de Clientes recurrentes _= (# de clientes recurrentes) / (Clientes totales) * 100_**
 
-Es más barato conseguir que los clientes anteriores vuelvan a comprar que encontrar nuevos clientes pues cuesta 5 veces más adquirir un nuevo cliente que mantener uno antiguo.
+La tasa representativa de los clientes que ingresan al sitio mas de una vez al mes sobre el total de los clientes que visitaron el sitio durante el mismo periodo de tiempo. Auntque en este momento no se identifica el cliente en un futuro esto puede servir para realizar procesos de Lealtad con el cliente y acercar aun mas al turista a las organizaciones del municipio.
 
-- **Valor Medio de la Orden _= ingresos totales  / número de ordenes_**
-
-El valor medio de la orden es una métrica que permite conocer mes a mes el valor promedio de las ordenes que se realizan en la empresa. Esto permite a la empresa generar estrategias de adquisicion, ofertas de lanes y descuentos, la entrega de códigos de cupón o tarjetas de regalo.
 
 - **Tasa de rebote _= número total de visitas de una página / número total de sesiones de aplicación**
 
-Indica cuántos clientes abandonan el sitio después de ver solo una página. Pueden producirse tasas de rebote más altas después de una conversión de remarketing, cuando un usuario es enviado directamente a una página específica del ecommerce y se va sin realizar ninguna acción. Tambien puede darse por situaciones en la demora o cargue del sitio o el contenido, tiempo promedio de carga de la pagina:
+Indica cuántos clientes abandonan el sitio después de ver solo una página. Pueden producirse tasas de rebote más altas después de una conversión de remarketing, cuando un usuario es enviado directamente a una página específica de la plataforma y se va sin realizar ninguna acción. Tambien puede darse por situaciones en la demora o cargue del sitio o el contenido, tiempo promedio de carga de la pagina:
 
   * 1 a 3 seg. La probabilidad de rebote incrementa un 32%
   * 1 a 5 seg. La probabilidad de rebote incrementa un 90%
