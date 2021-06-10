@@ -973,56 +973,28 @@ A continuación, se detallan cada uno de los escenarios:
 | **Respuesta** | El sistema realizará un auto escalamiento de sus recursos de hardware de la siguiente manera:Si la afectación es por memoria esta se aumentará en un 50%  Si la afectación es por procesador este aumentará en un 50% en términos de Cores de procesamientoSi la afectación es por un recurso de almacenamiento compartido este se incrementará en un 50%|
 | **Medición de la respuesta** | Generando un alto volumen de transacciones que saturen los recursos y observar que el sistema se estabilice en: menos de 4 minutos – escenario Ideal 4-5 minutos escenario aceptable más de 5 escenario no tolerable |
 
-### Vista de Negocio
+### Vista de Negocio y Procesos
 
 El modelo de Arquitectura de Negocio detalla la interrelación de la entidad Turista con las entidades de negocio de organizacion y sus productos para su consulta y como las organizaciones y el administrador de la plataforma necesitar interactuar de forma coordinada para realizar la gestion de estos recursos.
 
-![alt text](../../diagrams/EE_DiagramaNegocio_v1.0.jpg?raw=true)
-
-### Vista de Procesos
-
-El proceso de reserva de la empresa Toures Balón se ha modificado en su mayoría, esto teniendo en cuenta las necesidades del negocio y la necesidad de automatizar el proceso en cuanto pueda ser posible. Este nuevo proceso de habilita el uso de un motor de reglas de negocio permitiendo dinamizar actividades como la validación del monto de una compra sin la necesidad de redesplegar el proceso.
+![alt text](../../diagrams/EE_DiagramaNegocio_v1.jpg?raw=true)
 
 ### Vista Logica
 
-La modelo de la arquitectura de aplicación propuesto detalla las aplicaciones, las funciones de aplicación y los servicios de aplicación los cuales soportan los diferentes procesos de negocio descritos en el modelo de arquitectura objetivo del dominio de negocio. Las aplicaciones descritas en el diagrama están compuestas por un conjunto de funciones de aplicación las cuales serán implementadas utilizando el patrón de arquitectura de microservicios.
+La modelo de la arquitectura de aplicación propuesto detalla las aplicaciones, las funciones de aplicación y los servicios de aplicación los cuales soportan los diferentes procesos de negocio descritos en el modelo de arquitectura de negocio. Las aplicaciones descritas en el diagrama están compuestas por un conjunto de funciones de aplicación las cuales serán implementadas utilizando el patrón de arquitectura de microservicios.
+
+![alt text](../../diagrams/EE_DiagramaDePaquetes_v1.0.jpg?raw=true)
 
 ### Vista Física
 
-El modelo de la arquitectura de tecnología describe cada uno de los componentes de hardware y software que están involucrados en los procesos de negocio en Toures Balón. Tal como se ha descrito en las anteriores fases, actualmente este proceso de negocio cuenta con una replicación de los procesos, sistemas y componentes para cada uno de los canales de atención y se centraliza únicamente en la fuente de información de los data center que involucran este proceso de negocio. Esta arquitectura ha sido diseñada desde su concepción para ser implementada sobre la nube.
+El modelo de la arquitectura de tecnología describe cada uno de los componentes de hardware y software que están involucrados en los procesos de negocio en El Eden app. Tal como se ha descrito en las anteriores fases, actualmente este proceso de negocio cuenta con una replicación de los procesos, sistemas y componentes para cada uno de los canales de atención (movil y web) y se centraliza en la fuente de información de los data center que involucran este proceso de negocio. Esta arquitectura ha sido diseñada desde su concepción para ser implementada sobre la nube.
 
-### Vista de Desarrollo
-
-
-### Desiciones de Arquitectura
-La solución de arquitectura propuesta para “Toures Balón” se basa en un estilo arquitectural de microservicios, permitiendo la encapsulación de responsabilidades definidas y un desacoplamiento e independencia de los servicios. Lo cual posibilita la adición o modificación de características a la arquitectura de forma ágil y sin generar indisponibilidades en la prestación de servicio o en el funcionamiento del negocio. A continuación, se detallan los patrones de Arquitectura a ser utilizados:
-
-| **NOMBRE** | **PROBLEMA QUE RESUELVE** |
-| --- | --- |
-| **API Gateway** | Se realiza el despliegue de un API Gateway propio del proveedor de nube. El API Gateway permite tener un único punto de acceso a los diferentes microservicios expuestos al portal web de Toures Balón, además de exponer o de ser un único punto de consultas a las API internas, permite tener servicios gestionados como monitoreo, publicación y protección de las APIs expuestas.
-| **Coreografía** | Es un estilo de composición de microservicios, en el cual cada servicio decide cuando y como una transacción es procesada; generalmente el microservicio o el servicio se suscribe a una cola o tópico de un gestor de colas y en el momento en que el evento de interés está presente el servicio de forma autónoma ejecuta su lógica de negocio mediante el desacoplo del contrato del servicio a su implementación. |
-| **Contrato Primero** | Este patrón permite que los servicio evolucionen sin afectar directamente a los consumidores mediante la definición de los contratos primero o antes de la tecnología o infraestructura de implementación. |
-| **Circuit Breaker** | Es un patrón de diseño que permite manejar las fallas cuando un microservicio(recurso) del que se depende comienza a fallar o tarda mucho en responder y convierte al microservicio que lo utiliza tolerante a fallos, haciendo a la aplicación más estable y resiliente.
-| **Data Model Transformation** | La lógica de transformación de modelo de datos se puede introducir para llevar a cabo la conversión en tiempo de ejecución de datos, de modo que estos se ajusten a un modelo de datos, pueden ser reestructurados para cumplir a un modelo de datos diferente. Este patrón de arquitectura se utilizará hacia los proveedores u aliados que tengan un esquema de mensajería/datos particulares(Bolivariano)
-| **Publisher-Subscriber** | Patrón de arquitectura fundamenta para una composición tipo coreográfica ya que permitirá desacoplar los servicios mediante el anuncio de eventos/mensajes a múltiples consumidores que estén interesados de forma asíncrona. 
-| **Service Inventory** | Un inventario de servicios es una colección de servicios estandarizados y gobernados de forma independiente dentro de un límite o dominio que representa una empresa o un segmento significativo de una empresa.
-| **Anti-Corruption layer** | Permite definir una fachada o un adaptador entre diferentes sistemas, en este caso puntual será el sistema de contabilidad. Esta capa o patrón nos permitirá traducir las peticiones de la nueva arquitectura del sistema de contabilidad al modelo de datos utilizados por los microservicios de la nueva arquitectura. 
-| **Legacy Wrapper** | Los servicios de envoltura necesarios para encapsular la lógica heredada a menudo se ven obligados a introducir un contrato de servicio no estándar con requisitos de acoplamiento de alta tecnología, lo que resulta en una proliferación de acoplamiento de implementación en todos los programas de servicio al consumidor. |
-| **Escalabilidad Dinamica** | Es difícil equipar un microservicio para que coincida con sus requisitos de procesamiento. Si la demanda del microservicio está por debajo de su capacidad, entonces está infrautilizada y si la demanda está por encima de su capacidad, se sobreutiliza o no puede satisfacer la demanda.El microservicio se puede integrar con una arquitectura reactiva capaz de escalarlo automáticamente horizontal o verticalmente en respuesta a la demanda fluctuante. |
-| **Enrutador** | Es el servicio encargado de identificar el convenio que se requiere para la realización de la transacción, además de identificar el tipo de servicio (Rest o SOAP), devolver el end point del servicio legado y definir el tipo de transacción. Además de permitir agregar, actualizar o eliminar nuevos convenios.
-| **Despachador** | Encargado de realizar el consumo y gestionar la comunicación de mensajes con los servicios de los proveedores. Este servicio se apoya del servicio de traductor cuando es necesario para realizar la transformación de los mensajes.
-| **Descubridor de Servicios** | La idea básica detrás del descubridor de servicio es que cualquier instancia pueda ser capaz de identificar el servicio que necesita consultar. Esto es necesario para que la nueva instancia sea capaz de conectarse al ambiente de una aplicación existente sin intervención manual. Esto se realizó a través de Eureka.
-| **Decoupled Contract** | Para que un servicio se posicione como un recurso empresarial eficaz, debe estar equipado con un contrato técnico que exista independientemente de su implementación pero que siga alineado con otros servicios. |
-| **Service Layer** | El inventario de servicios se estructura en dos o más capas de servicio lógico, cada una de las cuales es responsable de abstraer la lógica en función de un tipo funcional común. |
-| **Self-contained message** | Cada mensaje contendrá toda la información necesaria para procesar una solicitud, así como para comprender su respuesta. Al enviar una solicitud, debe recordar lo que desea hacer con la respuesta que eventualmente regresará. En otras palabras, debe administrar el estado de la operación más grande de la que forma parte este intercambio mientras la solicitud y la respuesta viajan entre los componentes. |
-
-### Arquitecrua Nativa para Nube
-El siguiente diagrama de despliegue muestra la arquitectura del sistema como implementación (distribución) de artefactos de software. Los artefactos representan elementos concretos en el mundo físico que son el resultado de un proceso de desarrollo y desplegado bajo una arquitectura nativa para nube. La solución planteada por Arquitectónicos para Toures Balón contempla el despliegue de contenedores en un proveedor de servicios cloud.  Estos son contruidos con todas las dependencias necesarias y desplegados en un repositorio de imagenes, facilmente desplegables y administrables asegurando la facil portabilidad del mismo. 
+El siguiente diagrama de despliegue muestra la arquitectura del sistema como implementación (distribución) de artefactos de software. Los artefactos representan elementos concretos en el mundo físico que son el resultado de un proceso de desarrollo y desplegado bajo una arquitectura nativa para nube. La solución planteada contempla el despliegue de contenedores en un proveedor de servicios cloud.  Estos son contruidos con todas las dependencias necesarias y desplegados en un repositorio de imagenes, facilmente desplegables y administrables asegurando la facil portabilidad del mismo. 
 
 El kernel o la parte principal del sistema operativo host y los servicios como el almacenamiento se comparten a través de un host. Su kernel compartido permite que los contenedores sean ligeros en comparacion con las maquinas virtuales tradicionales. En hosts que ya se están ejecutando, los contenedores se pueden iniciar rápidamente y ejecutar varios contenedores o instancias de los mismos contenedores en un solo host, lo que facilita la alta disponibilidad. La capacidad de poner en marcha rápidamente los contenedores apoya la capacidad de resiliencia de la solucion. Dentro de nuestra arquitectura utilizaremos Docker como herramienta de contenedores.
 
+![alt text](../../diagrams/EE_DiagramaInfraestructura_1.0.jpg?raw=true)
 
-![alt text](https://github.com/alejandro56664/aes-pica-final/blob/master/Taller4_ArquitecturaAplicaci%C3%B3n%20.NET/Diagramas/DTB_Despliegue.png?raw=true)
 
 Las ventajas de los contenedores incluyen:
 
@@ -1033,6 +1005,22 @@ Las ventajas de los contenedores incluyen:
 - Se pueden reiniciar rápidamente para recuperarse de un error.
 
 Para realizar la administración de contenedores entre los hosts se requiere una herramienta de orquestación. La configuración y administración de las soluciones de orquestación puede agregar sobrecarga y complejidad adicionales a los proyectos. Afortunadamente, muchos proveedores de nube proporcionan servicios de orquestación como Kubernetes para realizar esta administracion que va a ser la empleada en este caso.
+
+### Vista de Desarrollo
+
+![alt text](../../diagrams/EE_DiagramaDeClases_v1.0.png?raw=true)
+
+### Desiciones de Arquitectura
+La solución de arquitectura propuesta para “ElEdenApp” se basa en un estilo arquitectural de microservicios, permitiendo la encapsulación de responsabilidades definidas y un desacoplamiento e independencia de los servicios. Lo cual posibilita la adición o modificación de características a la arquitectura de forma ágil y sin generar indisponibilidades en la prestación de servicio o en el funcionamiento del negocio. A continuación, se detallan los patrones de Arquitectura a ser utilizados:
+
+| **NOMBRE** | **PROBLEMA QUE RESUELVE** |
+| --- | --- |
+| **Contrato Primero** | Este patrón permite que los servicio evolucionen sin afectar directamente a los consumidores mediante la definición de los contratos primero o antes de la tecnología o infraestructura de implementación. |
+| **Circuit Breaker** | Es un patrón de diseño que permite manejar las fallas cuando un microservicio(recurso) del que se depende comienza a fallar o tarda mucho en responder y convierte al microservicio que lo utiliza tolerante a fallos, haciendo a la aplicación más estable y resiliente.|
+| **Service Inventory** | Un inventario de servicios es una colección de servicios estandarizados y gobernados de forma independiente dentro de un límite o dominio que representa una empresa o un segmento significativo de una empresa.|
+| **Escalabilidad Dinamica** | Es difícil equipar un microservicio para que coincida con sus requisitos de procesamiento. Si la demanda del microservicio está por debajo de su capacidad, entonces está infrautilizada y si la demanda está por encima de su capacidad, se sobreutiliza o no puede satisfacer la demanda.El microservicio se puede integrar con una arquitectura reactiva capaz de escalarlo automáticamente horizontal o verticalmente en respuesta a la demanda fluctuante. |
+| **Decoupled Contract** | Para que un servicio se posicione como un recurso empresarial eficaz, debe estar equipado con un contrato técnico que exista independientemente de su implementación pero que siga alineado con otros servicios. |
+| **Self-contained message** | Cada mensaje contendrá toda la información necesaria para procesar una solicitud, así como para comprender su respuesta. Al enviar una solicitud, debe recordar lo que desea hacer con la respuesta que eventualmente regresará. En otras palabras, debe administrar el estado de la operación más grande de la que forma parte este intercambio mientras la solicitud y la respuesta viajan entre los componentes. |
 
 # METRICAS Y OBSERVABILIDAD
 
@@ -1114,14 +1102,3 @@ Indica cuántos clientes abandonan el sitio después de ver solo una página. Pu
 | [11] | Garner, «Information Technology Glossary,» Garner, [En línea]. Available: https://www.gartner.com/en/information-technology/glossary/devops. [Último acceso: 12 04 2020]. |
 | [12] | T. O. Foundation, «WWW Project Top Ten,» OWASP, [En línea]. Available: https://owasp.org/www-project-top-ten/. [Último acceso: 26 05 2020]. |
 | [13] | Microsoft, «docs.microsoft.com,» Microsoft, [En línea]. Available: https://docs.microsoft.com/en-us/dotnet/architecture/microservices/multi-container-microservice-net-applications/microservice-application-design. [Último acceso: 17 05 2020]. |
-
-
-
-## Referencias
-- Designing Software Architectures - A Practical Approach, 2016, Humberto Cervantes, Rick Kazman
-
-- Software Architecture in Practice (3rd Edition), 2019, Bass, Clements, Kazman.
-
-- Microservices Patterns, 2019,  Chris Richardson.
-
-- Cloud Design Patterns, 2018, Alex Homer, Jhon Sharp, Larray Brader, Masashi Narumoto, Trent Swanson
