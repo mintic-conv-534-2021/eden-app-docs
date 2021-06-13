@@ -1,0 +1,678 @@
+{
+	"info": {
+		"_postman_id": "3afff6f7-8c60-435c-971a-ab60c758a4d0",
+		"name": "EdenPortal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Evento_Listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.latebaida.com.co/api/v1/evento?filtrar-activos=false",
+					"protocol": "https",
+					"host": [
+						"api",
+						"latebaida",
+						"com",
+						"co"
+					],
+					"path": [
+						"api",
+						"v1",
+						"evento"
+					],
+					"query": [
+						{
+							"key": "filtrar-activos",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Evento_Crear",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "request",
+							"value": "{\n  \"nombre\": \"Pizza\",\n  \"activo\": true\n}",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "imagenWeb",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "imagenMovil",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.latebaida.com.co/api/v1/evento",
+					"protocol": "https",
+					"host": [
+						"api",
+						"latebaida",
+						"com",
+						"co"
+					],
+					"path": [
+						"api",
+						"v1",
+						"evento"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Evento_ActualizarEstado",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://api.latebaida.com.co/api/v1/evento/activo?eventoId=8&activo=false",
+					"protocol": "https",
+					"host": [
+						"api",
+						"latebaida",
+						"com",
+						"co"
+					],
+					"path": [
+						"api",
+						"v1",
+						"evento",
+						"activo"
+					],
+					"query": [
+						{
+							"key": "eventoId",
+							"value": "8"
+						},
+						{
+							"key": "activo",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CatalogoOrganizacion_Listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.latebaida.com.co/api/v1/catalogo-organizacion?filtrar-activos=false",
+					"protocol": "https",
+					"host": [
+						"api",
+						"latebaida",
+						"com",
+						"co"
+					],
+					"path": [
+						"api",
+						"v1",
+						"catalogo-organizacion"
+					],
+					"query": [
+						{
+							"key": "filtrar-activos",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CatalogoOrganizacion_Crear",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "request",
+							"value": "{\n\t\"catalogoOrganizacionNombre\": \"Piscinas\",\n\t\"descripcion\": \"Las Piscinas son muy chevres\",\n\t\"activo\": true\n}",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "imagen",
+							"type": "file",
+							"src": "/C:/Users/gcubillosgo/Desktop/SummerMovil.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.latebaida.com.co/api/v1/catalogo-organizacion",
+					"protocol": "https",
+					"host": [
+						"api",
+						"latebaida",
+						"com",
+						"co"
+					],
+					"path": [
+						"api",
+						"v1",
+						"catalogo-organizacion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CatalogoOrganizacion_ActualizarEstado",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://api.latebaida.com.co/api/v1/catalogo-organizacion/activo?catalogoOrganizacionId=6&activo=true",
+					"protocol": "https",
+					"host": [
+						"api",
+						"latebaida",
+						"com",
+						"co"
+					],
+					"path": [
+						"api",
+						"v1",
+						"catalogo-organizacion",
+						"activo"
+					],
+					"query": [
+						{
+							"key": "catalogoOrganizacionId",
+							"value": "6"
+						},
+						{
+							"key": "activo",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CatalogoProducto_ListarTodo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.latebaida.com.co/api/v1/catalogo-producto?filtrar-activos=true",
+					"protocol": "https",
+					"host": [
+						"api",
+						"latebaida",
+						"com",
+						"co"
+					],
+					"path": [
+						"api",
+						"v1",
+						"catalogo-producto"
+					],
+					"query": [
+						{
+							"key": "filtrar-activos",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CatalogoProducto_ListarXCatalogoOrganizacion",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.latebaida.com.co/api/v1/catalogo-producto/catalogo-organizacion/5",
+					"protocol": "https",
+					"host": [
+						"api",
+						"latebaida",
+						"com",
+						"co"
+					],
+					"path": [
+						"api",
+						"v1",
+						"catalogo-producto",
+						"catalogo-organizacion",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CatalogoProducto_Crear",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\r\n\t\t\"catalogoProductoNombre\": \"Cervezas Artesanales\",\r\n\t\t\"activo\": true,\r\n\t\t\"catalogoOganizacionId\": 5\r\n\t}\r\n]"
+				},
+				"url": {
+					"raw": "https://api.latebaida.com.co/api/v1/catalogo-producto",
+					"protocol": "https",
+					"host": [
+						"api",
+						"latebaida",
+						"com",
+						"co"
+					],
+					"path": [
+						"api",
+						"v1",
+						"catalogo-producto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CatalogoProducto_ActualizarEstado",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://api.latebaida.com.co/api/v1/catalogo-producto/activo?catalogoProductoId=16&activo=false",
+					"protocol": "https",
+					"host": [
+						"api",
+						"latebaida",
+						"com",
+						"co"
+					],
+					"path": [
+						"api",
+						"v1",
+						"catalogo-producto",
+						"activo"
+					],
+					"query": [
+						{
+							"key": "catalogoProductoId",
+							"value": "16"
+						},
+						{
+							"key": "activo",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Organizacion_ListarTodo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.latebaida.com.co/api/v1/organizacion?filtrar-activos=false",
+					"protocol": "https",
+					"host": [
+						"api",
+						"latebaida",
+						"com",
+						"co"
+					],
+					"path": [
+						"api",
+						"v1",
+						"organizacion"
+					],
+					"query": [
+						{
+							"key": "filtrar-activos",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Organizacion_Crear",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "logo",
+							"type": "file",
+							"src": "/C:/Users/gcubillosgo/Desktop/hotel logo.jpg"
+						},
+						{
+							"key": "request",
+							"value": "{\n\t\"nombre\": \"Hotel La Puerta de Plata\",\n\t\"descripcion\": \"El mejor Hotel del Quindio\",\n\t\"telefono\": \"3107126851\",\n\t\"direccion\": \"Cll 8 # 10-65 Local 03\",\n\t\"email\": \"string\",\n\t\"rm\": \"string\",\n\t\"rut\": \"00000000000\",\n\t\"rnt\": \"string\",\n\t\"activo\": true,\n\t\"redSocial\": {\n\t\t\"urlFacebook\": \"https://www.facebook.com/JugueraLaTebaida/\",\n\t\t\"urlTwitter\": \"\",\n\t\t\"whatsapp\": \"wa.me/573107126851\",\n\t\t\"urlInstagram\": \"https://www.instagram.com/lajugueratebaida\",\n\t\t\"urlTiktok\": \"\",\n\t\t\"webPage\": \"\"\n\t},\n\t\"catalogoOrganizacionId\": 5\n}",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "banner",
+							"type": "file",
+							"src": "/C:/Users/gcubillosgo/Desktop/hotelbanner.jpg"
+						},
+						{
+							"key": "rm",
+							"type": "file",
+							"src": "/C:/Users/gcubillosgo/Desktop/ImagenesServicios/Organización/LaJuguera_RUT .pdf"
+						},
+						{
+							"key": "rut",
+							"type": "file",
+							"src": "/C:/Users/gcubillosgo/Desktop/ImagenesServicios/Organización/LaJuguera_RUT .pdf"
+						},
+						{
+							"key": "rnt",
+							"type": "file",
+							"src": "/C:/Users/gcubillosgo/Desktop/ImagenesServicios/Organización/Papochas_RNT.pdf"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.latebaida.com.co/api/v1/organizacion",
+					"protocol": "https",
+					"host": [
+						"api",
+						"latebaida",
+						"com",
+						"co"
+					],
+					"path": [
+						"api",
+						"v1",
+						"organizacion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Organizacion_ActualizarEstado",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://api.latebaida.com.co/api/v1/organizacion/activo?organizacionId=3&activo=true",
+					"protocol": "https",
+					"host": [
+						"api",
+						"latebaida",
+						"com",
+						"co"
+					],
+					"path": [
+						"api",
+						"v1",
+						"organizacion",
+						"activo"
+					],
+					"query": [
+						{
+							"key": "organizacionId",
+							"value": "3"
+						},
+						{
+							"key": "activo",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Organizacion_ActualizarDatos",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "banner",
+							"type": "file",
+							"src": "/C:/Users/gcubillosgo/Desktop/olimpo banner.jpg",
+							"disabled": true
+						},
+						{
+							"key": "request",
+							"value": "{\n\t\"organizacionId\":6\n}",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "logo",
+							"type": "file",
+							"src": "/C:/Users/gcubillosgo/Desktop/olimpo_logo.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.latebaida.com.co/api/v1/organizacion",
+					"protocol": "https",
+					"host": [
+						"api",
+						"latebaida",
+						"com",
+						"co"
+					],
+					"path": [
+						"api",
+						"v1",
+						"organizacion"
+					],
+					"query": [
+						{
+							"key": "logo",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "request",
+							"value": "{\"organizacionId\": 0}",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Producto_ListarTodo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.latebaida.com.co/api/v1/producto?filtrar-activos=false",
+					"protocol": "https",
+					"host": [
+						"api",
+						"latebaida",
+						"com",
+						"co"
+					],
+					"path": [
+						"api",
+						"v1",
+						"producto"
+					],
+					"query": [
+						{
+							"key": "filtrar-activos",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Producto_Crear",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "request",
+							"value": "{\"nombre\": \"Empanaditas Caseras\",\"descripcion\": \"Empanaditas... #Deliciosas #PaPicar #LaJuguera #LaTebaida #PlazoletaMuseo\",\"precio\":5500, \"activo\":true, \"organizacionId\":3, \"catalogoProductoId\":1}",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "imagen",
+							"type": "file",
+							"src": "/C:/Users/gcubillosgo/Desktop/ImagenesServicios/Producto/La Juguera/Empanaditas.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.latebaida.com.co/api/v1/producto",
+					"protocol": "https",
+					"host": [
+						"api",
+						"latebaida",
+						"com",
+						"co"
+					],
+					"path": [
+						"api",
+						"v1",
+						"producto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Producto_ActualizarInfo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "request",
+							"value": " {\n      \"productoId\": 35\n    }",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "imagen",
+							"type": "file",
+							"src": "/C:/Users/gcubillosgo/Desktop/cama olimpo.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.latebaida.com.co/api/v1/producto",
+					"protocol": "https",
+					"host": [
+						"api",
+						"latebaida",
+						"com",
+						"co"
+					],
+					"path": [
+						"api",
+						"v1",
+						"producto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Producto_ActualizacionEstado",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://api.latebaida.com.co/api/v1/producto/activo?productoId=24&activo=true",
+					"protocol": "https",
+					"host": [
+						"api",
+						"latebaida",
+						"com",
+						"co"
+					],
+					"path": [
+						"api",
+						"v1",
+						"producto",
+						"activo"
+					],
+					"query": [
+						{
+							"key": "productoId",
+							"value": "24"
+						},
+						{
+							"key": "activo",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
